@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="img">Ressources/pic1.png</file>
+        <file>Ressources/ajouter.png</file>
+        <file>Ressources/afficher.png</file>
+        <file>Ressources/fermer.png</file>
+        <file>Ressources/supprimer.png</file>
+        <file>Ressources/pic.png</file>
+        <file>Ressources/modifier.png</file>
+    </qresource>
+</RCC>
