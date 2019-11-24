@@ -14,7 +14,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Responsable rayon</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MyResources.qrc">
+    <normaloff>:/new/prefix1/MyResources/computer-icons-avatar-user-login-avatar.jpg</normaloff>:/new/prefix1/MyResources/computer-icons-avatar-user-login-avatar.jpg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>true</bool>
@@ -24,6 +28,12 @@
 {
 
 background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
@@ -265,7 +275,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -447,7 +457,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -474,7 +484,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -574,8 +584,8 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <rect>
         <x>441</x>
         <y>361</y>
-        <width>321</width>
-        <height>31</height>
+        <width>352</width>
+        <height>37</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -631,7 +641,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -881,7 +891,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <string>Modifier</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -908,7 +918,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>11</x>
@@ -935,7 +945,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1031,7 +1041,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>0</x>

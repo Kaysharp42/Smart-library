@@ -4,13 +4,14 @@
 #include <QDebug>
 #include "ajouter_employe.h"
 #include <iostream>
+#include <QTime>
+#include <QMovie>
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
 {
     ui->setupUi(this);
    // this->centralWidget()->setStyleSheet("background-image:url(\MyResources\"background-appromoters-advertisers-1.png\"); background-position: center; ");
-
 }
 
 LogIn::~LogIn()
@@ -20,6 +21,9 @@ LogIn::~LogIn()
 
 void LogIn::on_LoginB_clicked()
 {
+
+    QMovie *movie = new QMovie(":/new/prefix1/MyResources/ajax-loader.gif");
+    movie->start();
     QSqlQuery query;
     QString select = "SELECT EMPLOYE_ID FROM COMPTE WHERE LOGIN_ID=? AND LOGIN_PASSWORD=?";
    // qDebug() << select;
