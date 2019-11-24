@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>MyResources/148-1488117_teacher-login-icon-teacher.png</file>
+        <file>MyResources/computer-icons-avatar-user-login-avatar.jpg</file>
+        <file>MyResources/customer-login-icon-27 (.jpg</file>
+        <file>MyResources/customer-login-icon-27.jpg</file>
+        <file>MyResources/icons8-grand-master-key-100.png</file>
+        <file>MyResources/images.png</file>
+        <file>MyResources/kissclipart-login-png-clipart-user-computer-icons-a59899d3a10c7dde.jpg</file>
+        <file>MyResources/kissclipart-login-png-clipart-user-computer-icons-a59899d3a10c7dde.png</file>
+        <file>MyResources/icons8-key-500.png</file>
+        <file>MyResources/login-graphic-woman-using-app.png</file>
+        <file>MyResources/iOS_Background_2.png</file>
+        <file>MyResources/15-153148_search-magnifying-glass-icon-black-search-icon-png.png</file>
+        <file>MyResources/icons8-search-512.png</file>
+        <file>MyResources/80745_c977e1f4028f918bae1e810a47e3c920.png</file>
+        <file>MyResources/background-appromoters-advertisers-1.png</file>
+        <file>MyResources/logout-icon.png</file>
+        <file>MyResources/74717143_267444830864596_8815271356854697984_n.png</file>
+        <file>MyResources/72195468_2354144681504889_3856566386230820864_n.png</file>
+        <file>MyResources/75233638_1278112199051443_1464214755626450944_n.png</file>
+        <file>MyResources/75369281_456114898366959_2872754137957662720_n.png</file>
+    </qresource>
+</RCC>
