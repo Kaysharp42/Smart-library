@@ -29,6 +29,7 @@ private slots:
 
     void on_commandLinkButton_disconnect_clicked();
 
+
 private:
 
     Employe E;

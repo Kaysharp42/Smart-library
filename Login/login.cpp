@@ -6,12 +6,21 @@
 #include <iostream>
 #include <QTime>
 #include <QMovie>
+#include <QSound>
+#include <QProgressBar>
+#include <QStatusBar>
+#include <QWidget>
+#include <QSpacerItem>
+#include <QHBoxLayout>
+#include <QThread>
+#include "windows.h"
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
 {
     ui->setupUi(this);
-   // this->centralWidget()->setStyleSheet("background-image:url(\MyResources\"background-appromoters-advertisers-1.png\"); background-position: center; ");
+
+ // this->centralWidget()->setStyleSheet("background-image:url(\MyResources\"background-appromoters-advertisers-1.png\"); background-position: center; ");
 }
 
 LogIn::~LogIn()
@@ -22,8 +31,23 @@ LogIn::~LogIn()
 void LogIn::on_LoginB_clicked()
 {
 
-    QMovie *movie = new QMovie(":/new/prefix1/MyResources/ajax-loader.gif");
-    movie->start();
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    QProgressBar * _progressBar = new QProgressBar();
+
+    _progressBar->setRange(0, 100);
+    _progressBar->setValue(0);
+    _progressBar->setTextVisible(true);
+    _progressBar->setFormat("Connecting");
+    ui->statusbar->addPermanentWidget( _progressBar, 2 );
+    for( int i = 0; i<=100; i+=10 ) {
+       _progressBar->setValue(i);
+       Sleep(50);
+    }
+    _progressBar->setVisible(false);
+
+   // QMovie *movie = new QMovie(":/new/prefix1/MyResources/ajax-loader.gif");
+   // movie->start();
     QSqlQuery query;
     QString select = "SELECT EMPLOYE_ID FROM COMPTE WHERE LOGIN_ID=? AND LOGIN_PASSWORD=?";
    // qDebug() << select;
@@ -35,8 +59,9 @@ void LogIn::on_LoginB_clicked()
      {
          if (query.next())
          {
+             ui->statusbar->showMessage("Connected.....",120);
+             Sleep(50);
              // You login a user here
-
              qDebug() << query.value(0).toString()<< "is logged in";
              QString Role;
              Role =query.value(0).toString();
@@ -71,6 +96,7 @@ void LogIn::on_LoginB_clicked()
              }
         else
          {
+                 ui->statusbar->showMessage("Login failed. Invalid username or password.",120);
              qDebug() << "Login failed. Invalid username or password.";
          }
      }

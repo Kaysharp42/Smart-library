@@ -178,12 +178,44 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
         <property name="text">
          <string>Ajouter </string>
         </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_2">
         <property name="text">
          <string>Disconnect</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/logout-icon.png</normaloff>:/new/prefix1/MyResources/logout-icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -260,8 +292,8 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
       <rect>
        <x>470</x>
        <y>410</y>
-       <width>352</width>
-       <height>42</height>
+       <width>377</width>
+       <height>57</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -270,12 +302,49 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
         <property name="text">
          <string>Supprimer </string>
         </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>
+          <disabledoff>:/new/prefix1/MyResources/delete.png</disabledoff>
+          <disabledon>:/new/prefix1/MyResources/deleteClicked.png</disabledon>
+          <selectedoff>:/new/prefix1/MyResources/delete.png</selectedoff>
+          <selectedon>:/new/prefix1/MyResources/deleteClicked.png</selectedon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_disconnect">
         <property name="text">
          <string>Disconnect</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/logout-icon.png</normaloff>:/new/prefix1/MyResources/logout-icon.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
         </property>
        </widget>
       </item>

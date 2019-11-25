@@ -26,5 +26,12 @@
         <file>MyResources/delete.png</file>
         <file>MyResources/edit.png</file>
         <file>MyResources/find.png</file>
+        <file>MyResources/deleteClicked.png</file>
+        <file>MyResources/findClicked.png</file>
+        <file>MyResources/newajouter.png</file>
+        <file>MyResources/newedit.png</file>
+        <file>MyResources/—Pngtree—cross symbol vector icon_3563484.png</file>
+        <file>MyResources/—Pngtree—cross symbol vector icon_35634999999999984.png</file>
+        <file>MyResources/Click.wav</file>
     </qresource>
 </RCC>

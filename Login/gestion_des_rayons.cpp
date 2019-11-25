@@ -9,7 +9,7 @@
 #include <QVariant>
 #include "login.h"
 #include <QDebug>
-
+#include <QSound>
 Gestion_des_Rayons::Gestion_des_Rayons(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gestion_des_Rayons)
@@ -32,11 +32,15 @@ Gestion_des_Rayons::~Gestion_des_Rayons()
 
 void Gestion_des_Rayons::on_commandLinkButton_7_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(0);
 
 }
 void Gestion_des_Rayons::on_commandLinkButton_Ajouet_Rayon_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
    ui->tableView_ajouter->setModel(r.Afficher());
       ui->tableView_ajouter->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     int id=ui->lineEdit_idrayon->text().toInt();
@@ -63,12 +67,16 @@ void Gestion_des_Rayons::on_commandLinkButton_Ajouet_Rayon_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_Annuler_ajout_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(0);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_modifier_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->tableView_modifier->setModel(r.Afficher());
        ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 int id=ui->lineEdit_id_modif->text().toInt();
@@ -80,6 +88,7 @@ QMessageBox msBox;
 
 if (test)
 {
+
     ui->tableView_modifier->setModel(r.Afficher());
     ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
    // ui->Tab_Etudiant->setModel(attmp.Afficher());
@@ -95,12 +104,16 @@ if (test)
 
 void Gestion_des_Rayons::on_commandLinkButton_annuler_modfi_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(0);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_Supprimer_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_supp->setModel(model);
     ui->tableView_supp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -126,12 +139,16 @@ void Gestion_des_Rayons::on_commandLinkButton_Supprimer_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_annuler_supp_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(0);
 
 }
 
 void Gestion_des_Rayons::on_pushButton_recherc_supp_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_supp->setModel(model);
     ui->tableView_supp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -148,6 +165,8 @@ void Gestion_des_Rayons::on_pushButton_recherc_supp_clicked()
 
 void Gestion_des_Rayons::on_pushButton_recher_modifier_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_modifier->setModel(model);
     ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -163,12 +182,16 @@ void Gestion_des_Rayons::on_pushButton_recher_modifier_clicked()
 
 void Gestion_des_Rayons::on_pushButton_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     this->close();
     //LogIn().show();
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_ajouter_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     int r_id=ui->lineEdit_rayonid->text().toInt();
     QString e_id=ui->lineEdit_etageid->text();
        qDebug() << r_id ;
@@ -194,15 +217,15 @@ void Gestion_des_Rayons::on_commandLinkButton_ajouter_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_annuler_clicked()
 {
-
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
         ui->stackedWidget->setCurrentIndex(0);
-
-
-
 }
 
 void Gestion_des_Rayons::on_pushButton_2_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_etageSupp->setModel(model);
     ui->tableView_etageSupp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -217,6 +240,8 @@ void Gestion_des_Rayons::on_pushButton_2_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_5_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_etageSupp->setModel(model);
     ui->tableView_etageSupp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -246,36 +271,48 @@ void Gestion_des_Rayons::on_commandLinkButton_5_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_A_R_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(1);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_M_R_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(2);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_S_R_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(3);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_A_E_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(5);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_S_E_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(6);
 
 }
 
 void Gestion_des_Rayons::on_commandLinkButton_AF_F_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(4);
 
 }
@@ -283,12 +320,16 @@ void Gestion_des_Rayons::on_commandLinkButton_AF_F_clicked()
 
 void Gestion_des_Rayons::on_commandLinkButton_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     ui->stackedWidget->setCurrentIndex(0);
 
 }
 
 void Gestion_des_Rayons::on_pushButton_Add_new_Product_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     int R_id=ui->lineEdit_Rayon_Id_Produit->text().toInt();
     int QTT=ui->lineEdit_QTT_Produit->text().toInt();
     int Num=ui->lineEdit_num_etage_produit->text().toInt();
@@ -315,6 +356,8 @@ void Gestion_des_Rayons::on_pushButton_Add_new_Product_clicked()
 
 void Gestion_des_Rayons::on_pushButton_Mod_Product_Qtt_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QString p_id =ui->lineEdit_Produit_Id_to_modifier->text();
     int Qtt=ui->lineEdit_new_qtt->text().toInt();
     Etagere e;
@@ -338,6 +381,8 @@ void Gestion_des_Rayons::on_pushButton_Mod_Product_Qtt_clicked()
 
 void Gestion_des_Rayons::on_pushButton_Mod_Product_num_etage_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QString p_id =ui->lineEdit_Produit_Id_to_modifier->text();
     int etage=ui->lineEdit_num_etage_produit->text().toInt();
     Etagere e;

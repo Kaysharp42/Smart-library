@@ -7,6 +7,7 @@
 #include <QSqlQueryModel>
 #include <QSqlQuery>
 #include <QVariant>
+#include <QSound>
 Ajouter_Employe::Ajouter_Employe(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Ajouter_Employe)
@@ -23,6 +24,8 @@ Ajouter_Employe::~Ajouter_Employe()
 
 void Ajouter_Employe::on_commandLinkButton_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
   //  QSqlQueryModel * model = new QSqlQueryModel();
   //  ui->table_empl->setModel(model);
    // ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -57,8 +60,10 @@ msBox.exec();
 
 void Ajouter_Employe::on_pb_supp_clicked()
 {
-
+  //  ui->pb_supp->setStyleSheet("border-image: url(:/new/prefix1/MyResources/deleteClicked.png)3 10 15 10;font: 24pt Bahnschrift;");
     Employe e;
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QString id=ui->lineEdit_Supp->text();
     bool test=e.Supprimer(id);
      QMessageBox msBox;
@@ -75,6 +80,8 @@ void Ajouter_Employe::on_pb_supp_clicked()
 
 void Ajouter_Employe::on_search_bf_delete_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QString id;
     QSqlQuery query;
     id= ui->lineEdit_Supp->text();
@@ -93,6 +100,9 @@ void Ajouter_Employe::on_search_bf_delete_clicked()
 
 void Ajouter_Employe::on_pushButton_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+
     QString id;
     QSqlQuery query;
     QSqlQueryModel * model = new QSqlQueryModel();
@@ -109,11 +119,16 @@ void Ajouter_Employe::on_pushButton_clicked()
 
 void Ajouter_Employe::on_commandLinkButton_2_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
    this->close();
 }
 
 void Ajouter_Employe::on_commandLinkButton_disconnect_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
 
    this->close();
 }
+
