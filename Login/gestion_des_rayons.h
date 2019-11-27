@@ -69,6 +69,16 @@ private slots:
 
     void UpdateTime();
 
+    void on_commandLinkButton_rech_produit_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_order_clicked();
+
+    void on_pushButton_trier_clicked();
+
 private:
     Ui::Gestion_des_Rayons *ui;
     Rayon r;

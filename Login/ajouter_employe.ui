@@ -41,7 +41,7 @@ background-image: url(:/new/prefix1/MyResources/75233638_1278112199051443_146421
 background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="Ajt_Emp">
     <property name="styleSheet">
@@ -221,6 +221,32 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
       </item>
      </layout>
     </widget>
+    <widget class="QPushButton" name="pushButton_Trier">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>350</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="MyResources.qrc">
+       <normaloff>:/new/prefix1/MyResources/trier1063846914-1024x1024.png</normaloff>:/new/prefix1/MyResources/trier1063846914-1024x1024.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Supp_Emp">
     <property name="autoFillBackground">
@@ -363,53 +389,141 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>170</y>
+       <y>230</y>
        <width>801</width>
-       <height>241</height>
+       <height>181</height>
       </rect>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>720</x>
-       <y>110</y>
+       <x>320</x>
+       <y>190</y>
        <width>91</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>Rechercher</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="MyResources.qrc">
        <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
      </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>520</x>
-       <y>40</y>
-       <width>291</width>
-       <height>41</height>
+       <x>10</x>
+       <y>30</y>
+       <width>381</width>
+       <height>151</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="label_10">
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Login ID :</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Login ID :              </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_4"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Type de recherche  :         </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_Type_Rc">
+          <item>
+           <property name="text">
+            <string>Select</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Standard</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>avancée</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Ordre :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_c">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>croissant</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_d">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>décroissant</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>

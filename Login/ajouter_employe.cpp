@@ -8,6 +8,8 @@
 #include <QSqlQuery>
 #include <QVariant>
 #include <QSound>
+#include <QDebug>
+
 Ajouter_Employe::Ajouter_Employe(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Ajouter_Employe)
@@ -109,12 +111,58 @@ void Ajouter_Employe::on_pushButton_clicked()
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     id=ui->lineEdit_4->text();
+    QString Type = ui->comboBox_Type_Rc->currentText();
+    if (ui->radioButton_c->isChecked())
+    {
+    if (Type =="Standard")
+    {
           model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID ='"+ui->lineEdit_4->text()+"'");
           model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    } else if (Type == "avancée")
+    {
+        model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID LIKE '%"+ui->lineEdit_4->text()+"%'");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+  ui->tableView->setModel(model);
+  ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    }
+    else
+    {
+       QMessageBox msBox;
+       msBox.setText("Please select type");
+                     msBox.exec();
+    }
+    } else if (ui->radioButton_d->isChecked())
+{
+        if (Type =="Standard")
+        {
+              model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID ='"+ui->lineEdit_4->text()+"' ORDER BY LOGIN_ID DESC ");
+              model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+              model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+              model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+        ui->tableView->setModel(model);
+        ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+        } else if (Type == "avancée")
+        {
+            model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID LIKE '%"+ui->lineEdit_4->text()+"%' ORDER BY LOGIN_ID DESC ");
+            model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+            model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+            model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+      ui->tableView->setModel(model);
+      ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+        }
+        else
+        {
+           QMessageBox msBox;
+           msBox.setText("Please select type");
+                         msBox.exec();
+        }
+    }
 }
 
 void Ajouter_Employe::on_commandLinkButton_2_clicked()
@@ -132,3 +180,17 @@ void Ajouter_Employe::on_commandLinkButton_disconnect_clicked()
    this->close();
 }
 
+
+void Ajouter_Employe::on_pushButton_Trier_clicked()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    ui->table_empl->setModel(model);
+          model->setQuery("SELECT * FROM EMPLOYES ORDER BY NOM ");
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("NUM_CIN"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+          ui->table_empl->setModel(model);
+          ui->table_empl->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+}

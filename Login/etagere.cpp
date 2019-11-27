@@ -58,7 +58,7 @@ QSqlQueryModel * Etagere::Afficher()
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("QTT_PRODUIT"));
           model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("NUM_ETAGE"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_ETAGE"));
             return model;
 }
 

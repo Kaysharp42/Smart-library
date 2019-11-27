@@ -244,6 +244,7 @@ void Gestion_des_Rayons::on_pushButton_2_clicked()
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("QTT_PRODUIT"));
           model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_ETAGE"));
     ui->tableView_etageSupp->setModel(model);
     ui->tableView_etageSupp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
@@ -273,6 +274,7 @@ void Gestion_des_Rayons::on_commandLinkButton_5_clicked()
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("QTT_PRODUIT"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_ETAGE"));
     ui->tableView_etageSupp->setModel(model);
     ui->tableView_etageSupp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
@@ -412,4 +414,59 @@ void Gestion_des_Rayons::on_pushButton_Mod_Product_num_etage_clicked()
         msBox.setText("ERROR");
                       msBox.exec();
     }
+}
+
+void Gestion_des_Rayons::on_commandLinkButton_rech_produit_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+
+}
+
+void Gestion_des_Rayons::on_pushButton_3_clicked()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    ui->tableView_etageSupp->setModel(model);
+    ui->tableView_etageSupp->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    QString Type =ui->comboBox_type_rec_pr->currentText() ;
+     QMessageBox msBox;
+    if(Type =="Standard")
+    {
+        qDebug()<<Type;
+        model->setQuery("SELECT * FROM PRODUIT WHERE PRODUIT_ID ='"+ui->lineEdit_rech_prod->text()+"'");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT"));
+        ui->tableView_produit->setModel(model);
+        ui->tableView_produit->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    } else if(Type =="Avancée")
+    {
+        qDebug()<<Type;
+
+        model->setQuery("SELECT * FROM PRODUIT WHERE PRODUIT_ID LIKE '%"+ui->lineEdit_rech_prod->text()+"%'");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT"));
+        ui->tableView_produit->setModel(model);
+        ui->tableView_produit->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    }else
+    {
+        msBox.setText("ERROR");
+                      msBox.exec();
+    }
+
+}
+void Gestion_des_Rayons::on_pushButton_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+
+}
+
+void Gestion_des_Rayons::on_pushButton_order_clicked()
+{
+    ui->tableView_ajouter->setModel(r.AfficherTrier());
+}
+
+void Gestion_des_Rayons::on_pushButton_trier_clicked()
+{
+    ui->tableView_rayon->setModel(r.AfficherTrier());
+    ui->tableView_etage_2->setModel(r.AfficherTrierEt());
+
 }

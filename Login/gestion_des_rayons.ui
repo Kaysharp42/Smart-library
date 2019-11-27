@@ -54,7 +54,7 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
 </string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>5</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label_13">
@@ -771,7 +771,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);
       <string>Welcome back !</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -982,6 +982,32 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       </item>
      </layout>
     </widget>
+    <widget class="QPushButton" name="pushButton_order">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>330</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="MyResources.qrc">
+       <normaloff>:/new/prefix1/MyResources/img_521151.png</normaloff>:/new/prefix1/MyResources/img_521151.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_3">
     <widget class="QGroupBox" name="groupBox">
@@ -1005,53 +1031,11 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>130</y>
+        <y>160</y>
         <width>441</width>
         <height>161</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>241</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_8">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit_id_modif"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_recher_modifier">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="MyResources.qrc">
-           <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
@@ -1110,7 +1094,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>150</y>
+        <y>180</y>
         <width>283</width>
         <height>22</height>
        </rect>
@@ -1137,7 +1121,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>220</y>
+        <y>250</y>
         <width>281</width>
         <height>22</height>
        </rect>
@@ -1173,6 +1157,59 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
           </property>
          </item>
         </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_recher_modifier">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>28</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="MyResources.qrc">
+        <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>251</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ID :           </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_id_modif"/>
        </item>
       </layout>
      </widget>
@@ -1324,9 +1361,9 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
      <widget class="QPushButton" name="pushButton_Add_new_Product">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>260</x>
         <y>150</y>
-        <width>41</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
@@ -1726,22 +1763,21 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       </layout>
      </widget>
     </widget>
-    <widget class="QCommandLinkButton" name="commandLinkButton">
+    <widget class="QPushButton" name="pushButton_trier">
      <property name="geometry">
       <rect>
-       <x>700</x>
-       <y>390</y>
-       <width>91</width>
-       <height>41</height>
+       <x>710</x>
+       <y>200</y>
+       <width>75</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>Annuler</string>
+      <string>Trier</string>
      </property>
      <property name="icon">
       <iconset resource="MyResources.qrc">
-       <normaloff>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_35634999999999984.png</normaloff>
-       <normalon>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_3563484.png</normalon>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_35634999999999984.png</iconset>
+       <normaloff>:/new/prefix1/MyResources/img_521151.png</normaloff>:/new/prefix1/MyResources/img_521151.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -1749,9 +1785,59 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <height>25</height>
       </size>
      </property>
-     <property name="checkable">
+     <property name="flat">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>390</y>
+       <width>366</width>
+       <height>47</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCommandLinkButton" name="commandLinkButton_rech_produit">
+        <property name="text">
+         <string>Rechecher produit</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCommandLinkButton" name="commandLinkButton">
+        <property name="text">
+         <string>Annuler</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_35634999999999984.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_3563484.png</normalon>:/new/prefix1/MyResources/—Pngtree—cross symbol vector icon_35634999999999984.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="Ajouter_etage">
@@ -2016,6 +2102,160 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
          <property name="checkable">
           <bool>true</bool>
          </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_5">
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>801</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Rechecher </string>
+     </property>
+     <widget class="QTableView" name="tableView_produit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>741</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>120</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="MyResources.qrc">
+        <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>29</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>382</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ok</string>
+      </property>
+      <property name="icon">
+       <iconset resource="MyResources.qrc">
+        <normaloff>:/new/prefix1/MyResources/logout-icon.png</normaloff>:/new/prefix1/MyResources/logout-icon.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>291</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_27">
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Produit id :           </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_rech_prod"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>291</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_28">
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Type de recherche</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_type_rec_pr">
+         <item>
+          <property name="text">
+           <string>Select</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Standard</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Avancée</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
