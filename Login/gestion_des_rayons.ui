@@ -54,7 +54,7 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
 </string>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label_13">
@@ -1186,7 +1186,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -1789,16 +1789,23 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>260</x>
        <y>390</y>
-       <width>366</width>
+       <width>544</width>
        <height>47</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCommandLinkButton" name="commandLinkButton_2">
+        <property name="text">
+         <string>Stats</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_rech_produit">
         <property name="text">
@@ -2190,7 +2197,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -2217,7 +2224,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>

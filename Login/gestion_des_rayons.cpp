@@ -13,6 +13,8 @@
 #include <windows.h>
 #include <QTimer>
 #include <QTime>
+
+//using namespace QtCharts;
 Gestion_des_Rayons::Gestion_des_Rayons(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gestion_des_Rayons)
@@ -284,8 +286,11 @@ void Gestion_des_Rayons::on_commandLinkButton_5_clicked()
 void Gestion_des_Rayons::on_commandLinkButton_A_R_clicked()
 {
     QSound Clicked(":/new/prefix1/MyResources/Click.wav");
-    Clicked.play();
-    ui->stackedWidget->setCurrentIndex(1);
+        Clicked.play();
+        if ( Clicked.isFinished())
+        {
+        ui->stackedWidget->setCurrentIndex(1);
+        }
 
 }
 
@@ -468,5 +473,10 @@ void Gestion_des_Rayons::on_pushButton_trier_clicked()
 {
     ui->tableView_rayon->setModel(r.AfficherTrier());
     ui->tableView_etage_2->setModel(r.AfficherTrierEt());
+
+}
+
+void Gestion_des_Rayons::on_commandLinkButton_2_clicked()
+{
 
 }

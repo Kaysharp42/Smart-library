@@ -34,7 +34,11 @@ void LogIn::on_LoginB_clicked()
     QSound Clicked(":/new/prefix1/MyResources/Click.wav");
     Clicked.play();
     QProgressBar * _progressBar = new QProgressBar();
-
+    QMainWindow * mw = new QMainWindow;
+    mw->setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    mw->resize(100, 100);
+    mw->pos();
+    mw->show();
     _progressBar->setRange(0, 100);
     _progressBar->setValue(0);
     _progressBar->setTextVisible(true);
@@ -97,7 +101,6 @@ void LogIn::on_LoginB_clicked()
         else
          {
                  ui->statusbar->showMessage("Login failed. Invalid username or password.",120);
-             qDebug() << "Login failed. Invalid username or password.";
          }
      }
 

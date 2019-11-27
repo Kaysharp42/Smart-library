@@ -79,6 +79,8 @@ private slots:
 
     void on_pushButton_trier_clicked();
 
+    void on_commandLinkButton_2_clicked();
+
 private:
     Ui::Gestion_des_Rayons *ui;
     Rayon r;
