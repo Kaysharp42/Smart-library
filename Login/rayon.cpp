@@ -40,7 +40,7 @@ QSqlQueryModel * Rayon::Afficher()
 bool Rayon::modifier(int id, int nbr,QString cat)
 {
     QSqlQuery query;
-          query.prepare("UPDATE RAYON  SET NBR_ETAGERE =:nbr WHERE ID=:id CATEGORY=:cat " );
+          query.prepare("UPDATE RAYON  SET NBR_ETAGERE =:nbr , CATEGORY=:cat WHERE ID=:id  " );
           query.bindValue(":nbr", nbr);
            query.bindValue(":id", id);
            query.bindValue(":cat", cat);

@@ -4,6 +4,8 @@
 #include <QDialog>
 #include "rayon.h"
 #include "etagere.h"
+#include <QTimer>
+
 namespace Ui {
 class Gestion_des_Rayons;
 }
@@ -65,9 +67,12 @@ private slots:
 
     void on_pushButton_Mod_Product_num_etage_clicked();
 
+    void UpdateTime();
+
 private:
     Ui::Gestion_des_Rayons *ui;
     Rayon r;
+    QTimer *timer_1s;
     Etagere E;
 
 };

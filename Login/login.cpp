@@ -84,7 +84,7 @@ void LogIn::on_LoginB_clicked()
                 //this->close();
             Ajouter_Employe().exec();
 
-            } else if (DEP=="Responsable stock")
+            } else if (DEP=="Responsable rayon")
             {
                // this->close();
                 Gestion_des_Rayons().exec();

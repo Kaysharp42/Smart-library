@@ -10,11 +10,17 @@
 #include "login.h"
 #include <QDebug>
 #include <QSound>
+#include <windows.h>
+#include <QTimer>
+#include <QTime>
 Gestion_des_Rayons::Gestion_des_Rayons(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gestion_des_Rayons)
 {
     ui->setupUi(this);
+    timer_1s = new QTimer(this);
+        QObject::connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+        timer_1s->start(1000);
     ui->stackedWidget->setCurrentIndex(0);
     ui->lineEdit_idrayon->setValidator( new QIntValidator(0, 99999999, this) );
     ui->tableView_ajouter->setModel(r.Afficher());
@@ -28,7 +34,11 @@ Gestion_des_Rayons::~Gestion_des_Rayons()
     delete ui;
 }
 
+void Gestion_des_Rayons::UpdateTime()
+{
+    ui->lbl_time_6->setText(QTime::currentTime().toString("hh:mm:ss"));
 
+}
 
 void Gestion_des_Rayons::on_commandLinkButton_7_clicked()
 {
@@ -81,7 +91,7 @@ void Gestion_des_Rayons::on_commandLinkButton_modifier_clicked()
        ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 int id=ui->lineEdit_id_modif->text().toInt();
 int nbr=ui->lineEdit_4->text().toInt();
-QString Categorie = ui->lineEdit_new_categorie->text();
+QString Categorie = ui->comboBox_new_Categ->currentText();
 Rayon r;
 bool test=r.modifier(id,nbr,Categorie);
 QMessageBox msBox;

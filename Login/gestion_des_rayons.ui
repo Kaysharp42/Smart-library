@@ -62,13 +62,53 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
       <rect>
        <x>50</x>
        <y>30</y>
-       <width>151</width>
+       <width>171</width>
        <height>21</height>
       </rect>
      </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
      <property name="font">
       <font>
+       <family>Segoe Print</family>
        <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -103,19 +143,140 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
      <property name="autoDefault">
       <bool>true</bool>
      </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>40</x>
        <y>60</y>
-       <width>174</width>
+       <width>214</width>
        <height>371</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_A_R">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="PlaceholderText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="128">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="PlaceholderText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="128">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="PlaceholderText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="128">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="styleSheet">
          <string notr="true">QWidget#QCommandLinkButton
 {
@@ -125,19 +286,133 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);
         <property name="text">
          <string>Ajouter rayon</string>
         </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_M_R">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>52</red>
+              <green>156</green>
+              <blue>71</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>52</red>
+              <green>156</green>
+              <blue>71</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="text">
          <string>Modifier rayon</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newedit.png</normaloff>:/new/prefix1/MyResources/newedit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_S_R">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>117</red>
+              <green>201</green>
+              <blue>241</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>117</red>
+              <green>201</green>
+              <blue>241</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="text">
          <string>Supprimer rayon</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -155,8 +430,46 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);
        <height>41</height>
       </rect>
      </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
      <property name="font">
       <font>
+       <family>Segoe Script</family>
        <pointsize>14</pointsize>
       </font>
      </property>
@@ -169,29 +482,180 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);
       <rect>
        <x>530</x>
        <y>60</y>
-       <width>201</width>
+       <width>205</width>
        <height>371</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_A_E">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>204</red>
+              <green>147</green>
+              <blue>40</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="text">
          <string>Ajouter étagère</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_S_E">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>52</red>
+              <green>156</green>
+              <blue>71</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>52</red>
+              <green>156</green>
+              <blue>71</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="text">
          <string>Supprimer étagère</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newedit.png</normaloff>:/new/prefix1/MyResources/newedit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="commandLinkButton_AF_F">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>117</red>
+              <green>201</green>
+              <blue>241</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>117</red>
+              <green>201</green>
+              <blue>241</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
         <property name="text">
          <string>Affecter un produit</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -200,20 +664,148 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>280</x>
+       <x>300</x>
        <y>0</y>
-       <width>161</width>
-       <height>31</height>
+       <width>191</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>200</red>
+           <green>90</green>
+           <blue>97</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <family>Onyx</family>
+       <pointsize>36</pointsize>
       </font>
      </property>
      <property name="text">
       <string>Welcome back !</string>
      </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>400</y>
+       <width>261</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_26">
+      <item>
+       <widget class="QLabel" name="label_24">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Current Time:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lbl_time_6">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
@@ -325,7 +917,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
            </font>
           </property>
           <property name="text">
-           <string>ID :</string>
+           <string>ID :                    </string>
           </property>
          </widget>
         </item>
@@ -564,7 +1156,23 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_new_categorie"/>
+        <widget class="QComboBox" name="comboBox_new_Categ">
+         <item>
+          <property name="text">
+           <string>Select</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Livre</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>etsrt</string>
+          </property>
+         </item>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -723,7 +1331,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
        </rect>
       </property>
       <property name="text">
-       <string> </string>
+       <string/>
       </property>
       <property name="icon">
        <iconset resource="MyResources.qrc">
