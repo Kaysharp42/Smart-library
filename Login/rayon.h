@@ -15,6 +15,7 @@ public:
     QSqlQueryModel * Afficher();
     QSqlQueryModel * AfficherTrier();
     QSqlQueryModel * AfficherTrierEt();
+
     bool Supprimer(int);
     bool modifier(int,int,QString);
     ~Rayon(){}

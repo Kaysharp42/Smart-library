@@ -89,10 +89,17 @@ void Gestion_des_Rayons::on_commandLinkButton_modifier_clicked()
 {
     QSound Clicked(":/new/prefix1/MyResources/Click.wav");
     Clicked.play();
-    ui->tableView_modifier->setModel(r.Afficher());
-       ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
 int id=ui->lineEdit_id_modif->text().toInt();
 int nbr=ui->lineEdit_4->text().toInt();
+QSqlQueryModel * model = new QSqlQueryModel();
+
+      model->setQuery("SELECT * FROM RAYON WHERE ID ='"+ui->lineEdit_id_modif->text()+"'");
+      model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+      model->setHeaderData(2, Qt::Horizontal, QObject::tr("NBR_ETAGERE"));
+      model->setHeaderData(3, Qt::Horizontal, QObject::tr("CATEGORY"));
+ui->tableView_modifier->setModel(model);
+   ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 QString Categorie = ui->comboBox_new_Categ->currentText();
 Rayon r;
 bool test=r.modifier(id,nbr,Categorie);
@@ -182,12 +189,11 @@ void Gestion_des_Rayons::on_pushButton_recher_modifier_clicked()
     QSqlQueryModel * model = new QSqlQueryModel();
     ui->tableView_modifier->setModel(model);
     ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-
-
-
           model->setQuery("SELECT * FROM RAYON WHERE ID ='"+ui->lineEdit_id_modif->text()+"'");
           model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("NBR_ETAGERE"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("CATEGORY"));
+
     ui->tableView_modifier->setModel(model);
     ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
