@@ -5,7 +5,7 @@
 #include <QtDebug>
 int main(int argc, char *argv[])
 {  QApplication a(argc, argv);
-
+    a.setStyle("fusion");
     Connexion c;
 
   bool test=c.ouvrirConnexion();
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
   if(test)
   {w.show();
 
-      QMessageBox::critical(nullptr, QObject::tr("database is not open"),
+      QMessageBox::critical(nullptr, QObject::tr("database is open"),
                   QObject::tr("connection avec succés.\n"
                               "Click Cancel to exit."), QMessageBox::Cancel);
 
