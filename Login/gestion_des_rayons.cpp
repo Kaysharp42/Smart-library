@@ -293,10 +293,9 @@ void Gestion_des_Rayons::on_commandLinkButton_A_R_clicked()
 {
     QSound Clicked(":/new/prefix1/MyResources/Click.wav");
         Clicked.play();
-        if ( Clicked.isFinished())
-        {
+
         ui->stackedWidget->setCurrentIndex(1);
-        }
+
 
 }
 
