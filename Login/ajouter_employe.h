@@ -32,6 +32,8 @@ private slots:
 
     void on_pushButton_Trier_clicked();
 
+    void on_table_empl_clicked(const QModelIndex &index);
+
 private:
 
     Employe E;

@@ -54,7 +54,7 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
 </string>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label_13">
@@ -1569,7 +1569,7 @@ background-image: url(:/new/prefix1/MyResources/iOS_Background_2.png);}</string>
       </font>
      </property>
      <property name="text">
-      <string>Table des étagère :</string>
+      <string>Table des étagères :</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="groupBox_6">

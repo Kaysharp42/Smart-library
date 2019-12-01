@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
         bool test=c.createconnect();
         if(test)
 {
-Music.play();
-Music.setLoops(-1);
+//Music.play();
+//Music.setLoops(-1);
         w.show();
         QMessageBox::critical(nullptr, QObject::tr("database is open"),
                 QObject::tr("connection successful.\n"

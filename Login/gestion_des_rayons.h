@@ -81,6 +81,12 @@ private slots:
 
     void on_commandLinkButton_2_clicked();
 
+    void on_tableView_rayon_clicked(const QModelIndex &index);
+
+    void on_tableView_etage_2_clicked(const QModelIndex &index);
+
+    void on_tableView_etage_clicked(const QModelIndex &index);
+
 private:
     Ui::Gestion_des_Rayons *ui;
     Rayon r;

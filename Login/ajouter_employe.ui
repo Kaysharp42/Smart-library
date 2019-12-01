@@ -41,7 +41,7 @@ background-image: url(:/new/prefix1/MyResources/75233638_1278112199051443_146421
 background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="Ajt_Emp">
     <property name="styleSheet">
@@ -421,7 +421,7 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>

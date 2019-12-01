@@ -108,7 +108,7 @@ QMessageBox msBox;
 if (test)
 {
 
-    ui->tableView_modifier->setModel(r.Afficher());
+    ui->tableView_modifier->setModel(model);
     ui->tableView_modifier->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
    // ui->Tab_Etudiant->setModel(attmp.Afficher());
 
@@ -484,4 +484,56 @@ void Gestion_des_Rayons::on_pushButton_trier_clicked()
 void Gestion_des_Rayons::on_commandLinkButton_2_clicked()
 {
 
+}
+
+void Gestion_des_Rayons::on_tableView_rayon_clicked(const QModelIndex &index)
+{
+    QString val=ui->tableView_rayon->model()->data(index).toString();
+
+           QSqlQuery qry;
+           qry.prepare("select * from RAYON where ID='"+val+"' or NBR_ETAGERE='"+val+"' or CATEGORY='"+val+"'" );
+
+           if(qry.exec())
+           {
+               while(qry.next())
+               {
+                   ui->lineEdit_Rayon_Id_Produit->setText(qry.value(0).toString());
+               }
+           }
+}
+
+void Gestion_des_Rayons::on_tableView_etage_2_clicked(const QModelIndex &index)
+{
+    QString val=ui->tableView_etage_2->model()->data(index).toString();
+
+           QSqlQuery qry;
+           qry.prepare("select * from ETAGERE where ETAGERE_ID='"+val+"' or PRODUIT_ID='"+val+"' or QTT_PRODUIT='"+val+"' or ID='"+val+"' or NUM_ETAGE '"+val+"'" );
+
+           if(qry.exec())
+           {
+               while(qry.next())
+               {
+                   ui->lineEdit_Etage_Id_Produit->setText(qry.value(0).toString());
+                   ui->lineEdit_Produit_Id_to_modifier->setText(qry.value(1).toString());
+                   ui->lineEdit_new_qtt->setText(qry.value(2).toString());
+                   ui->lineEdit_new_etage->setText(qry.value(4).toString());
+
+               }
+           }
+}
+
+void Gestion_des_Rayons::on_tableView_etage_clicked(const QModelIndex &index)
+{
+    QString val=ui->tableView_etage->model()->data(index).toString();
+
+           QSqlQuery qry;
+           qry.prepare("select * from RAYON where ID='"+val+"' or NBR_ETAGERE='"+val+"' or CATEGORY='"+val+"'" );
+
+           if(qry.exec())
+           {
+               while(qry.next())
+               {
+                   ui->lineEdit_rayonid->setText(qry.value(0).toString());
+               }
+           }
 }

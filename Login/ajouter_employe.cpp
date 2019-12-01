@@ -194,3 +194,19 @@ void Ajouter_Employe::on_pushButton_Trier_clicked()
           ui->table_empl->setModel(model);
           ui->table_empl->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
+
+void Ajouter_Employe::on_table_empl_clicked(const QModelIndex &index)
+{
+    QString val=ui->table_empl->model()->data(index).toString();
+
+           QSqlQuery qry;
+           qry.prepare("select * from EMPLOYES where EMPLOYE_ID='"+val+"' or NUM_CIN='"+val+"' or DEPARTEMENT='"+val+"'" );
+
+           if(qry.exec())
+           {
+               while(qry.next())
+               {
+                   ui->lineEdit_Emp_id->setText(qry.value(0).toString());
+               }
+           }
+}
