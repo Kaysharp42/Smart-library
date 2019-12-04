@@ -1,130 +1,344 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QPixmap>
-#include <QDebug>
-#include <QtSql/QSqlError>
-#include <QtPrintSupport/QPrinter>
-#include <QtPrintSupport/QPrintDialog>
-#include <QMessageBox>
-#include <QtSql/QSqlQuery>
-#include"connexion.h"
-#include"commande.h"
-#include"livraison.h"
+#include "connexion.h"
+#include "commande.h"
+#include "notification.h"
+#include "mainwindow.h"
+#include <qmainwindow.h>
+#include <QMainWindow>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connexion c ;
-    if(c.createconnexion()==true)
-        ui->label_2->setText("CONNECTED") ;
+
+    refresh();
+    connect(ui->sendBtn_3, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->exitBtn_3, SIGNAL(clicked()),this, SLOT(close()));
+
 }
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+void MainWindow::sendMail()
+{
+Smtp* smtp = new Smtp(ui->uname_3->text(), ui->paswd_3->text(), ui->server_3->text(), ui->port_3->text().toUShort());
+connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+
+smtp->sendMail(ui->uname_3->text(), ui->rcpt_3->text() , ui->subject_3->text(),ui->msg_3->toPlainText());
+}
+
+void MainWindow::mailSent(QString status)
+{
+if(status == "Message sent")
+    QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message envoye !\n\n" ) );
+}
+void MainWindow::refresh()
+{
+  ui->tableView->setModel(tmpcmd.afficher_commande());
+  ui->comboBox_3->setModel(tmpcmd.afficher_list());
+  ui->comboBox_5->setModel(tmpcmd.afficher_list());
+  ui->tableView_2->setModel(tmppaiement.afficher_paiement());
+  ui->comboBox_4->setModel(tmppaiement.afficher_list());
+  ui->comboBox_6->setModel(tmppaiement.afficher_list());
+}
+
 void MainWindow::on_ajouter_clicked()
 {
-    QString num_cmd = ui->numcmd1->text();
-    QString date_paiement = ui->date1->text() ;
-    QString type = ui->type1->text() ;
-    int montant = ui->montant1->text().toInt() ;
-    paiement R(num_cmd,date_paiement,type,montant) ;
-    bool test = R.ajouterpaiement() ;
-    if(test == true)
-    {
-        QMessageBox::information(this,"Saved","Added") ;
-    }
-    else
-    {
-        QMessageBox::information(this,"Erreur","Erreur") ;
-    }
-}
-void MainWindow::on_modifier_clicked()
-{
+    QString idcmd=ui->idcmdajouter->text();
+    QString datecmd=ui->lineEdit_2->text();
+    QString idclient=ui->lineEdit_3->text();
 
-    QString num_cmd,date_paiement,type;int montant;
-    num_cmd=ui->numcmd2->text();
-    date_paiement=ui->date2->text();
-    type=ui->type2->text();
-    montant=ui->montant2->text().toInt();
-    QSqlQuery qry;
-    qry.prepare("update paiement set num_cmd='"+num_cmd+"',date_paiement='"+date_paiement+"',type='"+type+"',montant='"+montant+"' where num_cmd='"+num_cmd+"'");
-    if(qry.exec())
-    QMessageBox::critical(this,tr("Edit"),tr("updated"));
+    QString idp=ui->lineEdit_4->text();
+    int numcmd=ui->lineEdit_5->text().toInt();
+    commande e(idcmd,datecmd,idclient,idp,numcmd);
+    bool test=e.ajouter_commande();
+    if(test)
+    {   refresh();
+        QMessageBox::information(this, "PAS D'ERREUR", " commande ajoutée");
+    }
     else
-      QMessageBox::critical(this,tr("error::"),qry.lastError().text());
+    {
+        QMessageBox::critical(this, " ERREUR ", " commande non ajoutée ");
+    }
+
+
+    ui->tableView->setModel(tmpcmd.afficher_commande());
+    refresh();
 }
-void MainWindow::on_afficher_clicked()
-{
-   paiement *p=new paiement();
-   ui->tablepaiement->setModel(p->getAllpaiement());
-}
+
+
 
 void MainWindow::on_supprimer_clicked()
 {
-    QString num_cmd,date_paiement,type;
-int montant;
 
-    num_cmd=ui->numcmd3->text();
-    date_paiement=ui->date3->text();
-    type=ui->type3->text();
-    montant=ui->montant3->text().toInt();
-      QSqlQuery qry;
-      qry.prepare("Delete from paiement where num_cmd='"+num_cmd+"'");
-      if (qry.exec())
-          QMessageBox::critical(this,tr("Delete"),tr("Deleted"));
-      else
-          QMessageBox::critical(this,tr("error::"),qry.lastError().text());
+    QString idcmd = ui->sup->text();
+     commande e;
+     e.setidcmd(idcmd);
+     bool test=e.supprimer_commande();
+     if(test)
+     {   refresh();
+         QMessageBox::information(this, "PAS D'ERREUR", "commande supprimé");
+            QString okd="";
+             notification ok;
+             ok.notification_sup_cmd(okd);
+     }
+     else
+     {
+         QMessageBox::critical(this, " ERREUR ", "commande supprimé ");
+     }
+
+    ui->sup->clear();
+
+
 }
-void MainWindow::on_ajouter_liv_clicked()
+
+
+
+void MainWindow::on_modifier_2_clicked()
 {
-    QString num_liv = ui->num_liv1->text();
-    QString date_liv = ui->date_liv1->text() ;
-    QString adresse = ui->adresse1->text() ;
-    livraison R(num_liv,date_liv,adresse) ;
-    bool test = R.ajouterlivraison() ;
-    if(test == true)
-    {
-        QMessageBox::information(this,"Saved","Added") ;
+    tmpcmd.setdatecmd(ui->nom_4->text());
+    tmpcmd.setidclient(ui->prenom_4->text());
+    tmpcmd.setidp(ui->matricule_4->text());
+
+    tmpcmd.setnumcmd(ui->num_contrat->text().toInt());
+
+    bool test=tmpcmd.modifier_commande();
+    if(test){
+            QMessageBox::information(this, "PAS D'ERREUR", " commande modifié");
+        }
+        else
+        {
+            QMessageBox::critical(this, " ERREUR ", "commande non modifié ");
+        }
+    refresh();
+
+}
+
+
+
+void MainWindow::on_comboBox_3_activated(const QString &arg1)
+{
+    tmpcmd.setidcmd(arg1);
+    tmpcmd.chercher();
+    ui->nom_4->setText(tmpcmd.getdatecmd());
+    ui->prenom_4->setText(tmpcmd.getidclient());
+    ui->matricule_4->setText(tmpcmd.getidp());
+
+    ui->num_contrat->setText(QString::number(tmpcmd.getnumcmd()));
+    refresh();
+
+
+}
+
+void MainWindow::on_comboBox_5_activated(const QString &arg1)
+{
+    ui->sup->setText(arg1);
+
+}
+
+
+
+void MainWindow::on_lineEdit_19_textChanged(const QString &arg1)
+{
+    ui->tabemployer->setModel(tmpcmd.recherche(arg1,etat));
+    valeur=arg1;
+
+}
+
+
+
+void MainWindow::on_checkBox_2_stateChanged(int arg1)
+{
+
+    etat=arg1;
+    ui->tabemployer->setModel(tmpcmd.recherche(valeur,etat));
+
+}
+
+//paiement
+
+void MainWindow::on_ajouter_2_clicked()
+{   QString nump=ui->num_conge->text();
+    QString datep=ui->date_debut->text();
+    QString etatp=ui->date_fin->text();
+    QString typep=ui->type_3->text();
+    QString idp=ui->cine->text();
+
+    paiement g(nump,datep,etatp,typep,idp);
+    bool test=g.ajouter_paiement();
+    if(test)
+    {   refresh();
+        QMessageBox::information(this, "PAS D'ERREUR", " paiement ajouté");
     }
     else
     {
-        QMessageBox::information(this,"Erreur","Erreur") ;
+        QMessageBox::critical(this, " ERREUR ", "paiement non ajouté ");
     }
-}
-void MainWindow::on_modifier_liv_clicked()
-{
 
-    QString num_liv,date_liv,adresse;
-    num_liv=ui->num_liv2->text();
-    date_liv=ui->date_liv2->text();
-    adresse=ui->adresse2->text();
-    QSqlQuery qry;
-    qry.prepare("update livraison set num_liv='"+num_liv+"',date_liv='"+date_liv+"',adresse='"+adresse+"',where num_liv='"+num_liv+"'");
-    if(qry.exec())
-    QMessageBox::critical(this,tr("Edit"),tr("updated"));
-    else
-      QMessageBox::critical(this,tr("error::"),qry.lastError().text());
-}
-void MainWindow::on_afficher_liv_clicked()
-{
-   livraison *p=new livraison();
-   ui->tablelivraison->setModel(p->getAlllivraison());
-}
-void MainWindow::on_supprimer_liv_clicked()
-{
-    QString num_liv,date_liv,adresse;
 
-    num_liv=ui->num_liv3->text();
-    date_liv=ui->date_liv3->text();
-    adresse=ui->adresse3->text();
-      QSqlQuery qry;
-      qry.prepare("Delete from livraison where num_liv='"+num_liv+"'");
-      if (qry.exec())
-          QMessageBox::critical(this,tr("Delete"),tr("Deleted"));
-      else
-          QMessageBox::critical(this,tr("error::"),qry.lastError().text());
+    ui->tabconge->setModel(tmppaiement.afficher_paiement());
+    refresh();
+
 }
 
+void MainWindow::on_supprimer_2_clicked()
+{
+
+    QString nump = ui->sup_2->text();
+     paiement g;
+     g.setnump(nump);
+     bool test=g.supprimer_paiement();
+     if(test)
+     {   refresh();
+         QMessageBox::information(this, "PAS D'ERREUR", "paiement supprimé");
+         QString okd="";
+          notification ok;
+          ok.notification_sup_paiement(okd);
+     }
+     else
+     {
+         QMessageBox::critical(this, " ERREUR ", "paiement supprimé ");
+     }
+
+    ui->sup->clear();
+}
+
+void MainWindow::on_comboBox_6_activated(const QString &arg1)
+{
+   ui->sup_2->setText(arg1);
+}
+
+
+
+
+
+void MainWindow::on_modifier_3_clicked()
+{
+    tmppaiement.setdatep(ui->nom_5->text());
+    tmppaiement.setetatp(ui->prenom_5->text());
+    tmppaiement.settypep(ui->matricule_5->text());
+    tmppaiement.setidp(ui->age_5->text());
+
+
+    bool test=tmppaiement.modifier_paiement();
+
+ if(test){ refresh();
+         QMessageBox::information(this, "PAS D'ERREUR", " paiement modifié");
+     }
+     else
+     {
+         QMessageBox::critical(this, " ERREUR ", "paiement non modifié ");
+     }
+
+}
+
+
+
+void MainWindow::on_comboBox_4_activated(const QString &arg1)
+{
+    tmppaiement.setnump(arg1);
+    tmppaiement.chercher();
+    ui->nom_5->setText(tmppaiement.getdatep());
+    ui->prenom_5->setText(tmppaiement.getetatp());
+    ui->matricule_5->setText(tmppaiement.gettypep());
+    ui->age_5->setText(tmppaiement.getidp());
+
+}
+
+void MainWindow::on_lineEdit_20_textChanged(const QString &arg1)
+{
+    ui->tabconge->setModel(tmppaiement.recherche(arg1,etat));
+    valeur=arg1;
+}
+
+void MainWindow::on_checkBox_3_stateChanged(int arg1)
+{
+     etat=arg1;
+     ui->tabconge->setModel(tmppaiement.recherche(valeur,etat));
+
+}
+
+/*void MainWindow::on_tabWidget_2_currentChanged(int index)
+{
+    // set dark background gradient:
+          QLinearGradient gradient(0, 0, 0, 400);
+          gradient.setColorAt(0, QColor(90, 90, 90));
+          gradient.setColorAt(0.38, QColor(105, 105, 105));
+          gradient.setColorAt(1, QColor(70, 70, 70));
+          ui->customPlot->setBackground(QBrush(gradient));
+
+
+          // create empty bar chart objects:
+          QCPBars *amande = new QCPBars(ui->customPlot->xAxis, ui->customPlot->yAxis);
+          amande->setAntialiased(false);
+          amande->setStackingGap(1);
+           //set names and colors:
+         // amande->setName("Repartition des reservation selon les destinations");
+          amande->setPen(QPen(QColor(0, 168, 140).lighter(130)));
+          amande->setBrush(QColor(0, 168, 140));
+          // stack bars on top of each other:
+
+
+          // prepare x axis with country labels:
+          QVector<double> ticks;
+          QVector<QString> labels;
+          tmppaiement.statistique(&ticks,&labels);
+
+
+
+          QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
+          textTicker->addTicks(ticks, labels);
+          ui->customPlot->xAxis->setTicker(textTicker);
+          ui->customPlot->xAxis->setTickLabelRotation(60);
+          ui->customPlot->xAxis->setSubTicks(false);
+          ui->customPlot->xAxis->setTickLength(0, 4);
+          ui->customPlot->xAxis->setRange(0, 8);
+          ui->customPlot->xAxis->setBasePen(QPen(Qt::white));
+          ui->customPlot->xAxis->setTickPen(QPen(Qt::white));
+          ui->customPlot->xAxis->grid()->setVisible(true);
+          ui->customPlot->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+          ui->customPlot->xAxis->setTickLabelColor(Qt::white);
+          ui->customPlot->xAxis->setLabelColor(Qt::white);
+
+          // prepare y axis:
+          ui->customPlot->yAxis->setRange(0,10);
+          ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
+          ui->customPlot->yAxis->setLabel("Statistiques");
+          ui->customPlot->yAxis->setBasePen(QPen(Qt::white));
+          ui->customPlot->yAxis->setTickPen(QPen(Qt::white));
+          ui->customPlot->yAxis->setSubTickPen(QPen(Qt::white));
+          ui->customPlot->yAxis->grid()->setSubGridVisible(true);
+          ui->customPlot->yAxis->setTickLabelColor(Qt::white);
+          ui->customPlot->yAxis->setLabelColor(Qt::white);
+          ui->customPlot->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
+          ui->customPlot->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+
+          // Add data:
+
+          QVector<double> PlaceData;
+          QSqlQuery q1("select nump from paiement");
+          while (q1.next()) {
+                        int  nbr_fautee = q1.value(0).toInt();
+                        PlaceData<< nbr_fautee;
+                          }
+          amande->setData(ticks, PlaceData);
+          // setup legend:
+          ui->customPlot->legend->setVisible(true);
+          ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
+          ui->customPlot->legend->setBrush(QColor(255, 255, 255, 100));
+          ui->customPlot->legend->setBorderPen(Qt::NoPen);
+          QFont legendFont = font();
+          legendFont.setPointSize(10);
+          ui->customPlot->legend->setFont(legendFont);
+          ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+
+
+  refresh();
+} */

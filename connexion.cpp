@@ -1,25 +1,20 @@
 #include "connexion.h"
-#include <QDebug>
-#include <QtSql/QSqlError>
-
-bool connexion::createconnexion()
+bool connexion::CreatConnexion()
 {
-    mydb = QSqlDatabase::addDatabase("QSQLITE") ;
-    mydb.setDatabaseName("prosit");
-    mydb.setUserName("youssef02");
-    mydb.setPassword("esprit18");
+   mydb = QSqlDatabase::addDatabase("QOCI") ;
+   mydb.setDatabaseName("prosit");
+   mydb.setUserName("youssef02");
+   mydb.setPassword("esprit18");
 
-    if(mydb.open())
-    {
+   if(mydb.open())
+   {
 
-        return true ;
-
-
-
-qDebug()<<mydb.lastError().text();
-    }
-
-     return false ;
+       return true ;
 
 
+
+
+   }
+   else
+    return false ;
 }

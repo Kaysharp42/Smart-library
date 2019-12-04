@@ -1,45 +1,39 @@
-#ifndef PAIEMENT_H
-#define PAIEMENT_H
-#include<QString>
-#include <QtSql/QSqlQueryModel>
+#ifndef COMMANDE_H
+#define COMMANDE_H
 #include <QString>
-#include <QDateEdit>
-#include <QDate>
-#include <QtPrintSupport/QPrinter>
-#include <QtPrintSupport/QPrintDialog>
-#include <QTableView>
-#include "connexion.h"
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlQueryModel>
 
-
-class paiement
+class commande
 {
-private:
-private :
-    QString num_cmd  ;
-    QString date_paiement ;
-    QString  type ;
-    int montant ;
 public:
-    QString getnum_cmd(){return num_cmd;}
-    QString gettype(){return type;}
-    QString getdate_paiement(){return  date_paiement;}
-    int     getmontant(){return montant;}
+    commande();
+    commande(QString,QString,QString,QString,int);
+    void setidcmd(QString);
+    void setdatecmd(QString);
+    void setidclient(QString);
+    void setidp(QString);
+    void setnumcmd(int);
 
-    void    setnum_cmd(QString num_cmd){this->num_cmd=num_cmd;}
-    void    settype(QString type){this->type=type;}
-    void    setdate_paiement(QString date_paiement){this->date_paiement=date_paiement;}
-    void    setmontant(int montant){this->montant=montant;}
+    QString getidcmd();
+    QString getdatecmd();
+    QString getidclient();
+    QString getidp();
+    int getnumcmd();
 
-    paiement();
-    paiement(QString ,QString ,QString,int) ;
-     bool ajouterpaiement();
-           ~paiement(){}
-           QSqlQueryModel* getAllpaiement();
-           void deletepaiement(QString num_cmd);
-           void modifierpaiement(QString num_cmd);
-           QSqlQueryModel* afficherpaiement() ;
-           paiement getpaiement(QString num_cmd);
-           void ImprimerListepaiement(QTableView* table_paiement);
+    bool ajouter_commande();
+    bool modifier_commande();
+    bool supprimer_commande();
+    QSqlQueryModel * afficher_commande();
+    QSqlQueryModel * afficher_list();
+    void chercher();
+    QSqlQueryModel * recherche(QString valeur, int etat);
+
+private:
+    QString idcmd,datecmd,idclient,idp;
+    int numcmd;
+
 };
 
-#endif // PAIEMENT_H
+#endif // COMMANDE_H
+
