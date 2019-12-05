@@ -25,7 +25,12 @@ SOURCES += \
     gestion_des_rayons.cpp \
     main.cpp \
     login.cpp \
-    rayon.cpp
+    rayon.cpp \
+    contacts.cpp \
+    event.cpp \
+    mainwindow.cpp \
+reclamations.cpp
+
 
 HEADERS += \
     ajouter_employe.h \
@@ -34,12 +39,18 @@ HEADERS += \
     etagere.h \
     gestion_des_rayons.h \
     login.h \
-    rayon.h
+    rayon.h \
+    contacts.h \
+    event.h\
+    mainwindow.h \
+reclamations.h
+
 
 FORMS += \
     ajouter_employe.ui \
     gestion_des_rayons.ui \
-    login.ui
+    login.ui \
+mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -47,7 +58,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    MyResources.qrc
+    MyResources.qrc \
+    Ressources.qrc
 
 DISTFILES += \
     customer-login-icon-27.jpg

@@ -10,6 +10,8 @@
 #include <QMessageBox>
 #include "employe.h"
 #include "gestion_des_rayons.h"
+#include "mainwindow.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class LogIn; }
 QT_END_NAMESPACE
@@ -27,8 +29,11 @@ private slots:
 
     void on_LoginB_clicked();
 
+    void on_actionCheck_Data_Base_triggered();
+
 private:
 Employe E;
 Gestion_des_Rayons G;
+MainWindow MainWindow_;
 };
 #endif // LOGIN_H

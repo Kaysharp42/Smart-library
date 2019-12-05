@@ -56,8 +56,8 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>100</y>
+      <x>40</x>
+      <y>70</y>
       <width>231</width>
       <height>131</height>
      </rect>
@@ -347,12 +347,25 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
      <rect>
       <x>620</x>
       <y>250</y>
-      <width>91</width>
-      <height>31</height>
+      <width>101</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="MyResources.qrc">
+      <normaloff>:/new/prefix1/MyResources/login_11.png</normaloff>:/new/prefix1/MyResources/login_11.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>45</width>
+      <height>45</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
@@ -415,8 +428,60 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuCheck_DB">
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="tearOffEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionCheck_Data_Base"/>
+   </widget>
+   <widget class="QMenu" name="menuReclamation">
+    <property name="title">
+     <string>Reclamation</string>
+    </property>
+    <addaction name="actionEnvoyer_reclamation"/>
+    <addaction name="separator"/>
+    <addaction name="actionConsulter_reclamation"/>
+   </widget>
+   <addaction name="menuReclamation"/>
+   <addaction name="menuCheck_DB"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEnvoyer_reclamation">
+   <property name="text">
+    <string>Envoyer reclamation</string>
+   </property>
+  </action>
+  <action name="actionConsulter_reclamation">
+   <property name="text">
+    <string>Consulter reclamation</string>
+   </property>
+  </action>
+  <action name="actionCheck_Data_Base">
+   <property name="icon">
+    <iconset resource="MyResources.qrc">
+     <normaloff>:/new/prefix1/MyResources/Database-06-512.png</normaloff>:/new/prefix1/MyResources/Database-06-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Data Base</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="MyResources.qrc"/>

@@ -14,6 +14,8 @@
 #include <QHBoxLayout>
 #include <QThread>
 #include "windows.h"
+#include "connection.h"
+#include "mainwindow.h"
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
@@ -92,6 +94,10 @@ void LogIn::on_LoginB_clicked()
             {
                // this->close();
                 Gestion_des_Rayons().exec();
+            } else if (DEP=="Responsable RH")
+            {
+                this->hide();
+                MainWindow_.show();
             }
 
          } else {
@@ -109,3 +115,25 @@ void LogIn::on_LoginB_clicked()
 }
 }
 
+
+void LogIn::on_actionCheck_Data_Base_triggered()
+{
+    Connection c;
+    try {
+        bool test=c.createconnect();
+        if(test)
+{
+//Music.play();
+//Music.setLoops(-1);
+
+        QMessageBox::critical(nullptr, QObject::tr("database is open"),
+                QObject::tr("connection successful.\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+    } catch (QString s ) {
+       qDebug()<<s;
+       QMessageBox::critical(nullptr, QObject::tr("database is not open"),
+                QObject::tr("connection failed.\n"
+                               "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+}
