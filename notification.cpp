@@ -15,7 +15,7 @@ void notification::notification_sup_cmd(QString id)
     QString s = id;
     //notifyIcon->setVisible(1);
     notifyIcon->show();
-    notifyIcon->showMessage("News","une commande a ete supprimée de la base !",QSystemTrayIcon::Information,15000);
+    notifyIcon->showMessage("News","une commande a ete supprimer de la base !",QSystemTrayIcon::Information,15000);
 //num++;
 }
 
@@ -28,7 +28,7 @@ void notification::notification_sup_paiement(QString id)
     QString s = id;
     //notifyIcon->setVisible(1);
     notifyIcon->show();
-    notifyIcon->showMessage("News","Un paiement a ete supprimé de la base !",QSystemTrayIcon::Information,15000);
+    notifyIcon->showMessage("News","Un paiement a ete supprimer de la base !",QSystemTrayIcon::Information,15000);
 //num++;
 }
 

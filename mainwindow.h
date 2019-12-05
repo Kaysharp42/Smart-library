@@ -7,7 +7,9 @@
 #include "qcustomplot.h"
 #include "smtp.h"
 #include <QtWidgets/QMessageBox>
+#include <QtSql/QSqlDatabase>
 #include "notification.h"
+#include "connexion.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -58,7 +60,7 @@ private slots:
 
     void on_checkBox_3_stateChanged(int arg1);
 
-    void on_tabWidget_2_currentChanged(int index);
+   /* void on_tabWidget_2_currentChanged(int index);*/
 
 private:
     Ui::MainWindow *ui;

@@ -1,19 +1,18 @@
 #ifndef CONNEXION_H
 #define CONNEXION_H
+#include <QSqlDatabase>
 #include <QMainWindow>
-#include<QtSql/QSqlDatabase>
-#include<QDebug>
-#include<QFileInfo>
-#include<QtSql/QSqlError>
-
-class connexion
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlQueryModel>
+class Connexion
 {
+private:
+    QSqlDatabase db;
+public:
+    Connexion();
+    bool ouvrirConnexion();
+    void fermerConnexion();
 
+};
 
-private :
-    QSqlDatabase mydb ;
-public :
-    bool CreatConnexion() ;
-
-} ;
 #endif // CONNEXION_H

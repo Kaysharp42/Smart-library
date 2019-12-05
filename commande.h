@@ -1,8 +1,8 @@
 #ifndef COMMANDE_H
 #define COMMANDE_H
 #include <QString>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlQueryModel>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class commande
 {
@@ -36,4 +36,3 @@ private:
 };
 
 #endif // COMMANDE_H
-

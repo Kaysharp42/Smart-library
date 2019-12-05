@@ -6,166 +6,162 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1098</width>
+    <height>651</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QToolBox" name="toolBox">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>781</width>
-      <height>481</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1091</width>
+      <height>611</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe Print</family>
+      <family>Georgia</family>
       <pointsize>14</pointsize>
       <weight>50</weight>
-      <italic>false</italic>
+      <italic>true</italic>
       <bold>false</bold>
      </font>
     </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="tabletTracking">
-     <bool>false</bool>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>GESTION DES COMMANDES</string>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1091</width>
+       <height>527</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Gestion des commandes</string>
      </attribute>
-     <widget class="QTabWidget" name="tabWidget_2">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>781</width>
-        <height>441</height>
+        <x>-10</x>
+        <y>10</y>
+        <width>1041</width>
+        <height>531</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Segoe Print</family>
+        <family>Simplified Arabic Fixed</family>
         <pointsize>14</pointsize>
         <weight>50</weight>
-        <italic>false</italic>
+        <italic>true</italic>
         <bold>false</bold>
+        <underline>false</underline>
        </font>
-      </property>
-      <property name="mouseTracking">
-       <bool>true</bool>
-      </property>
-      <property name="tabletTracking">
-       <bool>false</bool>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
       </property>
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="tab_3">
+      <widget class="QWidget" name="tab_8">
        <attribute name="title">
         <string>AJOUT</string>
        </attribute>
-       <widget class="QSplitter" name="splitter_4">
+       <widget class="QSplitter" name="splitter_9">
         <property name="geometry">
          <rect>
-          <x>46</x>
-          <y>40</y>
-          <width>281</width>
-          <height>261</height>
+          <x>190</x>
+          <y>60</y>
+          <width>238</width>
+          <height>231</height>
          </rect>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
-        <widget class="QSplitter" name="splitter_3">
+        <widget class="QSplitter" name="splitter_8">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <widget class="QSplitter" name="splitter_2">
+         <widget class="QSplitter" name="splitter_6">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="reference_6">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>ID CMD :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="reference_4">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>DATE CMD :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="reference">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>ID CLIENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="quantite">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>ID PAIEMENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="type">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
@@ -173,166 +169,183 @@
            </property>
           </widget>
          </widget>
-         <widget class="QSplitter" name="splitter">
+         <widget class="QSplitter" name="splitter_7">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QLineEdit" name="idcmdajouter"/>
-          <widget class="QLineEdit" name="lineEdit_2"/>
-          <widget class="QLineEdit" name="lineEdit_3"/>
-          <widget class="QLineEdit" name="lineEdit_4"/>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="cin"/>
+          <widget class="QLineEdit" name="nom"/>
+          <widget class="QLineEdit" name="prenom"/>
+          <widget class="QLineEdit" name="matricule"/>
+          <widget class="QLineEdit" name="numcontart"/>
          </widget>
         </widget>
-        <widget class="QPushButton" name="pushButton">
-         <property name="font">
-          <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
+        <widget class="QPushButton" name="ajouter">
          <property name="text">
-          <string>AJOUTER COMMANDE</string>
+          <string>Ajouter commande</string>
          </property>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_4">
+      <widget class="QWidget" name="tab_9">
        <attribute name="title">
         <string>MODIFICATION</string>
        </attribute>
-       <widget class="QSplitter" name="splitter_28">
+       <widget class="QSplitter" name="splitter_5">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>40</y>
-          <width>341</width>
-          <height>301</height>
+          <x>160</x>
+          <y>20</y>
+          <width>481</width>
+          <height>311</height>
          </rect>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
-        <widget class="QSplitter" name="splitter_29">
+        <widget class="QSplitter" name="splitter_4">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Vertical</enum>
          </property>
-         <widget class="QSplitter" name="splitter_30">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         <widget class="QLabel" name="label_18">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
           </property>
-          <widget class="QLabel" name="label_25">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID CMD :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_26">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>DATE CMD :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_27">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID CLIENT :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_28">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID PAIEMENT :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_29">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>NUM CMD :</string>
-           </property>
-          </widget>
+          <property name="text">
+           <string>Saisir l'identifiant de la commande à modifier :</string>
+          </property>
          </widget>
-         <widget class="QSplitter" name="splitter_31">
+         <widget class="QSplitter" name="splitter_3">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="QComboBox" name="comboBox_3"/>
-          <widget class="QLineEdit" name="lineEdit_25"/>
-          <widget class="QLineEdit" name="lineEdit_27"/>
-          <widget class="QLineEdit" name="lineEdit_28"/>
-          <widget class="QLineEdit" name="lineEdit_29"/>
+          <widget class="QSplitter" name="splitter">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QLabel" name="reference_8">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID CMD :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="quantite_8">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>DATE CMD :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="prix_7">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID CLIENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_7">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_11">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>NUM CMD :</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QSplitter" name="splitter_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QComboBox" name="comboBox_3"/>
+           <widget class="QLineEdit" name="nom_4"/>
+           <widget class="QLineEdit" name="prenom_4"/>
+           <widget class="QLineEdit" name="matricule_4"/>
+           <widget class="QLineEdit" name="num_contrat"/>
+          </widget>
          </widget>
         </widget>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="modifier_2">
          <property name="font">
           <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
            <weight>75</weight>
-           <italic>false</italic>
+           <italic>true</italic>
            <bold>true</bold>
+           <underline>false</underline>
           </font>
          </property>
          <property name="text">
-          <string>MODIFIER COMMANDE</string>
+          <string>Modifier commande</string>
          </property>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_5">
+      <widget class="QWidget" name="tab_10">
        <attribute name="title">
         <string>AFFICHAGE</string>
        </attribute>
        <widget class="QSplitter" name="splitter_11">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>30</y>
-          <width>461</width>
-          <height>301</height>
+          <x>30</x>
+          <y>40</y>
+          <width>481</width>
+          <height>321</height>
          </rect>
         </property>
         <property name="orientation">
@@ -342,126 +355,116 @@
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <widget class="QSplitter" name="splitter_9">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <widget class="QLabel" name="label_11">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID CMD :</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_11"/>
-         </widget>
-         <widget class="QCheckBox" name="checkBox">
+         <widget class="QLabel" name="label_31">
           <property name="font">
            <font>
-            <family>Segoe Print</family>
-            <pointsize>12</pointsize>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>false</italic>
+            <italic>true</italic>
             <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Décroissant</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QTableView" name="tableView"/>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_6">
-       <attribute name="title">
-        <string>SUPPRESSION</string>
-       </attribute>
-       <widget class="QSplitter" name="splitter_32">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>100</y>
-          <width>371</width>
-          <height>101</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <widget class="QSplitter" name="splitter_33">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <widget class="QLabel" name="label_30">
-          <property name="font">
-           <font>
-            <family>Segoe Print</family>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <italic>false</italic>
-            <bold>true</bold>
+            <underline>false</underline>
            </font>
           </property>
           <property name="text">
            <string>ID CMD :</string>
           </property>
          </widget>
-         <widget class="QSplitter" name="splitter_34">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLineEdit" name="lineEdit_19"/>
+         <widget class="QCheckBox" name="checkBox_2">
+          <property name="text">
+           <string>decroissant</string>
           </property>
-          <widget class="QComboBox" name="comboBox_4"/>
-          <widget class="QLineEdit" name="lineEdit_30"/>
          </widget>
         </widget>
-        <widget class="QPushButton" name="pushButton_8">
-         <property name="font">
-          <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>SUPPRIMER COMMANDE</string>
-         </property>
-        </widget>
+        <widget class="QTableView" name="tabemployer"/>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
-        <string>MAIL</string>
+        <string>SUPPRESSION</string>
        </attribute>
-       <widget class="QPushButton" name="sendBtn_3">
+       <widget class="QSplitter" name="splitter_13">
         <property name="geometry">
          <rect>
-          <x>410</x>
-          <y>281</y>
-          <width>93</width>
-          <height>28</height>
+          <x>98</x>
+          <y>106</y>
+          <width>431</width>
+          <height>161</height>
          </rect>
         </property>
-        <property name="text">
-         <string>envoyer</string>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
+        <widget class="QLabel" name="label_20">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir l'identifiant de la commande à supprimer:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="reference_sup_4">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID CMD :</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_5"/>
+         <widget class="QLineEdit" name="sup">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="supprimer">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Supprimer Commande</string>
+         </property>
+        </widget>
        </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>envoyer email</string>
+       </attribute>
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>10</y>
-          <width>391</width>
-          <height>251</height>
+          <x>140</x>
+          <y>20</y>
+          <width>631</width>
+          <height>380</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_3">
@@ -475,49 +478,49 @@
           <number>9</number>
          </property>
          <item row="0" column="0">
-          <widget class="QLabel" name="label_31">
+          <widget class="QLabel" name="label_15">
            <property name="text">
             <string>Smtp-server:</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label_32">
+          <widget class="QLabel" name="label_16">
            <property name="text">
             <string>Server port:</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="label_33">
+          <widget class="QLabel" name="label_17">
            <property name="text">
             <string>email</string>
            </property>
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="label_34">
+          <widget class="QLabel" name="label_22">
            <property name="text">
             <string>mdp</string>
            </property>
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="label_35">
+          <widget class="QLabel" name="label_23">
            <property name="text">
             <string>destinataire</string>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_36">
+          <widget class="QLabel" name="label_24">
            <property name="text">
             <string>sujet</string>
            </property>
           </widget>
          </item>
          <item row="6" column="0">
-          <widget class="QLabel" name="label_37">
+          <widget class="QLabel" name="label_25">
            <property name="text">
             <string>message</string>
            </property>
@@ -561,11 +564,22 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>20</y>
+          <width>242</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+       </widget>
        <widget class="QPushButton" name="exitBtn_3">
         <property name="geometry">
          <rect>
-          <x>530</x>
-          <y>281</y>
+          <x>670</x>
+          <y>430</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -574,235 +588,149 @@
          <string>quitter</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="sendBtn_3">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>envoyer</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>GESTION DES PAIEMENTS</string>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1091</width>
+       <height>527</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Gestion des paiements</string>
      </attribute>
-     <widget class="QTabWidget" name="tabWidget_3">
+     <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>781</width>
-        <height>441</height>
+        <width>1001</width>
+        <height>481</height>
        </rect>
       </property>
-      <property name="currentIndex">
-       <number>2</number>
+      <property name="font">
+       <font>
+        <family>Georgia</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+       </font>
       </property>
-      <widget class="QWidget" name="tab_7">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_12">
        <attribute name="title">
         <string>AJOUT</string>
        </attribute>
-       <widget class="QSplitter" name="splitter_14">
+       <widget class="QSplitter" name="splitter_17">
         <property name="geometry">
          <rect>
-          <x>46</x>
-          <y>40</y>
-          <width>281</width>
-          <height>261</height>
+          <x>190</x>
+          <y>60</y>
+          <width>256</width>
+          <height>211</height>
          </rect>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
-        <widget class="QSplitter" name="splitter_15">
+        <widget class="QSplitter" name="splitter_16">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <widget class="QSplitter" name="splitter_16">
+         <widget class="QSplitter" name="splitter_14">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="reference_7">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>NUM PAIEMENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="reference_5">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>DATE PAIEMENT:</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_15">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ETAT PAIEMENT :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_16">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>TYPE PAIEMENT :</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_17">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID PAIEMENT :</string>
-           </property>
-          </widget>
-         </widget>
-         <widget class="QSplitter" name="splitter_17">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <widget class="QLineEdit" name="lineEdit_14"/>
-          <widget class="QLineEdit" name="lineEdit_15"/>
-          <widget class="QLineEdit" name="lineEdit_16"/>
-          <widget class="QLineEdit" name="lineEdit_17"/>
-          <widget class="QLineEdit" name="lineEdit_18"/>
-         </widget>
-        </widget>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="font">
-          <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>AJOUTER PAIEMENT</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_8">
-       <attribute name="title">
-        <string>MODIFICATION</string>
-       </attribute>
-       <widget class="QSplitter" name="splitter_21">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>20</y>
-          <width>341</width>
-          <height>301</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <widget class="QSplitter" name="splitter_20">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <widget class="QSplitter" name="splitter_18">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <widget class="QLabel" name="label_18">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>NUM PAIEMENT:</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_19">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>DATE PAIEMENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_20">
+          <widget class="QLabel" name="reference_2">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>ETAT PAIEMENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_21">
+          <widget class="QLabel" name="quantite_2">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
             <string>TYPE PAIEMENT :</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_22">
+          <widget class="QLabel" name="prix_2">
            <property name="font">
             <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
              <weight>75</weight>
-             <italic>false</italic>
+             <italic>true</italic>
              <bold>true</bold>
+             <underline>false</underline>
             </font>
            </property>
            <property name="text">
@@ -810,44 +738,183 @@
            </property>
           </widget>
          </widget>
-         <widget class="QSplitter" name="splitter_19">
+         <widget class="QSplitter" name="splitter_15">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QComboBox" name="comboBox"/>
-          <widget class="QLineEdit" name="lineEdit_20"/>
-          <widget class="QLineEdit" name="lineEdit_21"/>
-          <widget class="QLineEdit" name="lineEdit_22"/>
-          <widget class="QLineEdit" name="lineEdit_23"/>
+          <widget class="QLineEdit" name="num_conge"/>
+          <widget class="QLineEdit" name="date_debut"/>
+          <widget class="QLineEdit" name="date_fin"/>
+          <widget class="QLineEdit" name="type_3"/>
+          <widget class="QLineEdit" name="cine"/>
          </widget>
         </widget>
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="font">
-          <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
+        <widget class="QPushButton" name="ajouter_2">
          <property name="text">
-          <string>MODIFIER PAIEMENET</string>
+          <string>Ajouter paiement </string>
          </property>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_9">
+      <widget class="QWidget" name="tab_13">
        <attribute name="title">
-        <string>AFFICHAGE</string>
+        <string>MODIFICATION</string>
        </attribute>
        <widget class="QSplitter" name="splitter_22">
         <property name="geometry">
          <rect>
           <x>50</x>
           <y>30</y>
-          <width>461</width>
+          <width>481</width>
           <height>301</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QLabel" name="label_19">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir le numero du paiement à modifier :</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_21">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QSplitter" name="splitter_20">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QSplitter" name="splitter_18">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QLabel" name="reference_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>NUM PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="quantite_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>DATE PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="prix_8">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ETAT PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>TYPE PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_10">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID PAIEMENT :</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QSplitter" name="splitter_19">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QComboBox" name="comboBox_4"/>
+           <widget class="QLineEdit" name="nom_5"/>
+           <widget class="QLineEdit" name="prenom_5"/>
+           <widget class="QLineEdit" name="matricule_5"/>
+           <widget class="QLineEdit" name="age_5"/>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="modifier_3">
+          <property name="font">
+           <font>
+            <family>Georgia</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Modifier Paiement</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_14">
+       <attribute name="title">
+        <string>AFFICHAGE</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_24">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>571</width>
+          <height>331</height>
          </rect>
         </property>
         <property name="orientation">
@@ -857,113 +924,116 @@
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <widget class="QSplitter" name="splitter_24">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <widget class="QLabel" name="label_23">
-           <property name="font">
-            <font>
-             <family>Segoe Print</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>ID CMD :</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit_24"/>
-         </widget>
-         <widget class="QCheckBox" name="checkBox_2">
+         <widget class="QLabel" name="label_32">
           <property name="font">
            <font>
-            <family>Segoe Print</family>
-            <pointsize>12</pointsize>
+            <family>Georgia</family>
+            <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>false</italic>
+            <italic>true</italic>
             <bold>true</bold>
+            <underline>false</underline>
            </font>
           </property>
           <property name="text">
-           <string>Décroissant</string>
+           <string>NUM PAIEMENT :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_20"/>
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="text">
+           <string>DECROISSANT </string>
           </property>
          </widget>
         </widget>
-        <widget class="QTableView" name="tableView_2"/>
+        <widget class="QTableView" name="tabconge"/>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_10">
+      <widget class="QWidget" name="tab_15">
        <attribute name="title">
         <string>SUPPRESSION</string>
        </attribute>
-       <widget class="QSplitter" name="splitter_27">
+       <widget class="QSplitter" name="splitter_26">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>120</y>
-          <width>371</width>
-          <height>101</height>
+          <x>116</x>
+          <y>110</y>
+          <width>451</width>
+          <height>161</height>
          </rect>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
-        <widget class="QSplitter" name="splitter_26">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <widget class="QLabel" name="label_24">
-          <property name="font">
-           <font>
-            <family>Segoe Print</family>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <italic>false</italic>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>NUM PAIEMENT:</string>
-          </property>
-         </widget>
-         <widget class="QSplitter" name="splitter_25">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <widget class="QComboBox" name="comboBox_2"/>
-          <widget class="QLineEdit" name="lineEdit_26"/>
-         </widget>
-        </widget>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QLabel" name="label_21">
          <property name="font">
           <font>
-           <family>Segoe Print</family>
-           <pointsize>12</pointsize>
+           <family>Georgia</family>
+           <pointsize>9</pointsize>
            <weight>75</weight>
-           <italic>false</italic>
+           <italic>true</italic>
            <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="text">
-          <string>SUPPRIMER PAIEMENT</string>
+          <string>Saisir le num du paiement à supprimer:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_25">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="reference_sup_5">
+          <property name="font">
+           <font>
+            <family>Georgia</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>NUM PAIEMENT :</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_6"/>
+         <widget class="QLineEdit" name="sup_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="supprimer_2">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Supprimer Paiement</string>
          </property>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_12">
+      <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>STAT</string>
+        <string>statistique</string>
        </attribute>
        <widget class="QCustomPlot" name="customPlot" native="true">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>771</width>
-          <height>391</height>
+          <x>30</x>
+          <y>10</y>
+          <width>881</width>
+          <height>331</height>
          </rect>
         </property>
        </widget>
@@ -977,8 +1047,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1098</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

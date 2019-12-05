@@ -3,9 +3,6 @@
 #include "connexion.h"
 #include "commande.h"
 #include "notification.h"
-#include "mainwindow.h"
-#include <qmainwindow.h>
-#include <QMainWindow>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->sendBtn_3, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->exitBtn_3, SIGNAL(clicked()),this, SLOT(close()));
 
+Connexion c;
+c.ouvrirConnexion();
 }
+
+
 
 MainWindow::~MainWindow()
 {
@@ -41,35 +42,35 @@ if(status == "Message sent")
 }
 void MainWindow::refresh()
 {
-  ui->tableView->setModel(tmpcmd.afficher_commande());
+  ui->tabemployer->setModel(tmpcmd.afficher_commande());
   ui->comboBox_3->setModel(tmpcmd.afficher_list());
   ui->comboBox_5->setModel(tmpcmd.afficher_list());
-  ui->tableView_2->setModel(tmppaiement.afficher_paiement());
+  ui->tabconge->setModel(tmppaiement.afficher_paiement());
   ui->comboBox_4->setModel(tmppaiement.afficher_list());
   ui->comboBox_6->setModel(tmppaiement.afficher_list());
 }
 
 void MainWindow::on_ajouter_clicked()
 {
-    QString idcmd=ui->idcmdajouter->text();
-    QString datecmd=ui->lineEdit_2->text();
-    QString idclient=ui->lineEdit_3->text();
+    QString idcmd=ui->cin->text();
+    QString datecmd=ui->nom->text();
+    QString idclient=ui->prenom->text();
 
-    QString idp=ui->lineEdit_4->text();
-    int numcmd=ui->lineEdit_5->text().toInt();
+    QString idp=ui->matricule->text();
+    int numcmd=ui->numcontart->text().toInt();
     commande e(idcmd,datecmd,idclient,idp,numcmd);
     bool test=e.ajouter_commande();
     if(test)
     {   refresh();
-        QMessageBox::information(this, "PAS D'ERREUR", " commande ajoutée");
+        QMessageBox::information(this, "PAS D'ERREUR", " commande ajouté");
     }
     else
     {
-        QMessageBox::critical(this, " ERREUR ", " commande non ajoutée ");
+        QMessageBox::critical(this, " ERREUR ", " commande non ajouté ");
     }
 
 
-    ui->tableView->setModel(tmpcmd.afficher_commande());
+    ui->tabemployer->setModel(tmpcmd.afficher_commande());
     refresh();
 }
 
@@ -342,3 +343,5 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1)
 
   refresh();
 } */
+
+

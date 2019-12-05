@@ -30210,3 +30210,5 @@ QPen QCPItemBracket::mainPen() const
     return mSelected ? mSelectedPen : mPen;
 }
 /* end of 'src/items/item-bracket.cpp' */
+
+

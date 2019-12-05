@@ -1,8 +1,8 @@
 #ifndef PAIEMENT_H
 #define PAIEMENT_H
 #include <QString>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlQueryModel>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 #include "qcustomplot.h"
 class paiement
 {
