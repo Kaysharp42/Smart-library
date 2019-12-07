@@ -5,7 +5,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 QT += multimedia
 CONFIG += resources_big
-
+QT += multimedia
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -29,7 +29,8 @@ SOURCES += \
     contacts.cpp \
     event.cpp \
     mainwindow.cpp \
-reclamations.cpp
+reclamations.cpp \
+    setting.cpp
 
 
 HEADERS += \
@@ -43,14 +44,16 @@ HEADERS += \
     contacts.h \
     event.h\
     mainwindow.h \
-reclamations.h
+reclamations.h \
+    setting.h
 
 
 FORMS += \
     ajouter_employe.ui \
     gestion_des_rayons.ui \
     login.ui \
-mainwindow.ui
+mainwindow.ui \
+    setting.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

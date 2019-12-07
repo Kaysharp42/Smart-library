@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "employe.h"
+#include "setting.h"
 namespace Ui {
 class Ajouter_Employe;
 }
@@ -34,9 +35,12 @@ private slots:
 
     void on_table_empl_clicked(const QModelIndex &index);
 
+    void on_Settings_clicked();
+
 private:
 
     Employe E;
+    Setting S;
 };
 
 #endif // AJOUTER_EMPLOYE_H

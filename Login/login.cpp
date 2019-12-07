@@ -16,6 +16,7 @@
 #include "windows.h"
 #include "connection.h"
 #include "mainwindow.h"
+#include "setting.h"
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
@@ -72,7 +73,7 @@ void LogIn::on_LoginB_clicked()
              QString Role;
              Role =query.value(0).toString();
              QSqlQuery query_;
-             QString select_ = "SELECT DEPARTEMENT FROM EMPLOYES WHERE EMPLOYE_ID=?";
+             QString select_ = "SELECT DEPARTEMENT FROM EMPLOYES WHERE EMPLOYES_ID=?";
            qDebug() << select_;
              query_.prepare(select_);
              query_.addBindValue(Role);
@@ -136,4 +137,12 @@ void LogIn::on_actionCheck_Data_Base_triggered()
                 QObject::tr("connection failed.\n"
                                "Click Cancel to exit."), QMessageBox::Cancel);
     }
+}
+
+
+
+
+void LogIn::on_actionSettings_triggered()
+{
+s.show();
 }

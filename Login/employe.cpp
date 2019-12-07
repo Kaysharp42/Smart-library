@@ -33,9 +33,9 @@ QSqlQueryModel * Employe::Afficher()
 {
     QSqlQueryModel * model = new QSqlQueryModel();
           model->setQuery("SELECT * FROM COMPTE");
-          model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
-          model->setHeaderData(1, Qt::Horizontal, QObject::tr("CIN"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
 
 
     return model;
@@ -67,5 +67,54 @@ bool Employe::Check_Employe_Id(QString id)
         query.prepare(select);
         query.addBindValue(id);
      return query.exec();
+
+}
+QSqlQueryModel * Employe::Afficher_on_search_bf_delete_clicked(QString id)
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+          model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID ='"+id+"'");
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+          return model;
+}
+
+QSqlQueryModel * Employe::Afficher_on_pushButton_clicked(QString id)
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+          model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID ='%"+id+"%'");
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+          return model;
+}
+QSqlQueryModel * Employe::Afficher_on_pushButton_clicked_DESC (QString id )
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID ='"+id+"' ORDER BY LOGIN_ID DESC ");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+          return model;
+}
+QSqlQueryModel * Employe::Afficher_on_pushButton_clicked_AV_DESC (QString id )
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM COMPTE WHERE LOGIN_ID LIKE '%"+id+"%' ORDER BY LOGIN_ID DESC ");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("LOGIN_ID"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("LOGIN_PASSWORD"));
+    return model ;
+}
+QSqlQueryModel * Employe::AfficherC_Ordered ( )
+{
+QSqlQueryModel * model = new QSqlQueryModel();
+model->setQuery("SELECT * FROM EMPLOYES ORDER BY NOM ");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("NUM_CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+return  model ;
 
 }

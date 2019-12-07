@@ -15,8 +15,14 @@ public:
   // QSqlQueryModel afficher();
     QSqlQueryModel * Afficher();
     QSqlQueryModel * AfficherC();
+    QSqlQueryModel * AfficherC_Ordered();
     bool Supprimer(QString);
     bool Check_Employe_Id(QString);
+    QSqlQueryModel * Afficher_on_search_bf_delete_clicked(QString);
+    QSqlQueryModel * Afficher_on_pushButton_clicked (QString) ;
+    QSqlQueryModel * Afficher_on_pushButton_clicked_DESC (QString) ;
+    QSqlQueryModel * Afficher_on_pushButton_clicked_AV_DESC (QString) ;
+
     ~Employe(){}
 
 };

@@ -77,4 +77,47 @@ bool Rayon::Supprimer(int id)
           query.bindValue(":id",id);
           return query.exec();
 }
+QSqlQueryModel *  Rayon::on_commandLinkButton_modifier_clicked(QString id )
+{
 
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM RAYON WHERE ID ='"+id+"'");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("NBR_ETAGERE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("CATEGORY"));
+    return model;
+
+}
+QSqlQueryModel * Rayon::Afficher_ETA(QString id )
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM ETAGERE WHERE ETAGERE_ID ='"+id+"'");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ETAGERE_ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("QTT_PRODUIT"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_ETAGE"));
+    return  model;
+}
+QSqlQueryModel * Rayon::Afficher_produit(QString id )
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM PRODUIT WHERE PRODUIT_ID ='"+id+"'");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT"));
+
+    return model ;
+}
+QSqlQueryModel * Rayon::Afficher_produit_Av(QString id )
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM PRODUIT WHERE PRODUIT_ID ='%"+id+"%'");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("PRODUIT_ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRODUIT"));
+
+    return model ;
+}

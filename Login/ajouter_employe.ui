@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>871</width>
-    <height>481</height>
+    <width>873</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,34 +19,37 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog#Ajouter_Employe{
-background-image: url(:/new/prefix1/MyResources/75233638_1278112199051443_1464214755626450944_n.png);}</string>
+border-image:url(:/new/prefix1/MyResources/39496316340_66986bb280_b.jpg);}
+</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>871</width>
-     <height>481</height>
+     <width>881</width>
+     <height>491</height>
     </rect>
    </property>
    <property name="accessibleName">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QTabWidget#tabWidget{&lt;/p&gt;&lt;p&gt;background-image: url(:/new/prefix1/MyResources/80745_c977e1f4028f918bae1e810a47e3c920.png);&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="autoFillBackground">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget#Ajt_Emp{
-background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
+    <string notr="true">#tabWidget{
+border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);
+background-color: rgba(0, 0, 0, 0%);}</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="Ajt_Emp">
     <property name="styleSheet">
-     <string notr="true">QWidget#Ajt_Emp{
-background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
+     <string notr="true">#Ajt_Emp{
+border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);
+background-color: rgba(0, 0, 0, 0%);}</string>
     </property>
     <attribute name="title">
      <string>Ajouter compte</string>
@@ -114,6 +117,19 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+background-color: rgba(0, 0, 0, 50);
+}
+</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_loginid">
      <property name="geometry">
@@ -123,6 +139,18 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <width>151</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+background-color: rgba(0, 0, 0, 50);
+}</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_loginpass">
@@ -134,6 +162,18 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+background-color: rgba(0, 0, 0, 50);
+}</string>
+     </property>
     </widget>
     <widget class="QTableView" name="table_empl">
      <property name="geometry">
@@ -143,6 +183,25 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <width>481</width>
        <height>241</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+background: rgba(255, 255, 255,50);
+}
+QTableView QTableCornerButton::section
+{
+     background: rgba(0, 0, 0, 0%);
+}
+QTableView::item:focus
+
+{
+    color:white;
+}
+QTableView::item:selected
+{
+    color:black;
+     background: rgba(0, 0, 0, 50%);
+}</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -247,14 +306,28 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QToolButton" name="Settings">
+     <property name="geometry">
+      <rect>
+       <x>804</x>
+       <y>10</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Supp_Emp">
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#Supp_Emp{
-background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
+     <string notr="true">#Supp_Emp{
+border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);
+background-color: rgba(0, 0, 0, 0%);}</string>
     </property>
     <attribute name="title">
      <string>Supprimer  compte</string>
@@ -268,22 +341,50 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <height>192</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+background: rgba(255, 255, 255,50);
+}
+QTableView QTableCornerButton::section
+{
+     background: rgba(0, 0, 0, 0%);
+}
+QTableView::item:focus
+
+{
+    color:white;
+}
+QTableView::item:selected
+{
+    color:black;
+     background: rgba(0, 0, 0, 50%);
+}</string>
+     </property>
     </widget>
     <widget class="QPushButton" name="search_bf_delete">
      <property name="geometry">
       <rect>
-       <x>720</x>
+       <x>740</x>
        <y>80</y>
        <width>91</width>
-       <height>31</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="text">
-      <string>Rechercher</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="MyResources.qrc">
        <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
@@ -309,7 +410,20 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_Supp"/>
+       <widget class="QLineEdit" name="lineEdit_Supp">
+        <property name="styleSheet">
+         <string notr="true">  QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+background-color: rgba(0, 0, 0, 50);
+}</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -379,8 +493,9 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
    </widget>
    <widget class="QWidget" name="Aff_Emp">
     <property name="styleSheet">
-     <string notr="true">QWidget#Aff_Emp{
-background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271356854697984_n.png);}</string>
+     <string notr="true">#Aff_Emp{
+border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);
+background-color: rgba(0, 0, 0, 0%);}</string>
     </property>
     <attribute name="title">
      <string>Afficher  compte</string>
@@ -393,6 +508,25 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
        <width>801</width>
        <height>181</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+background: rgba(255, 255, 255,50);
+}
+QTableView QTableCornerButton::section
+{
+     background: rgba(0, 0, 0, 0%);
+}
+QTableView::item:focus
+
+{
+    color:white;
+}
+QTableView::item:selected
+{
+    color:black;
+     background: rgba(0, 0, 0, 50%);
+}</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
@@ -446,7 +580,20 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="styleSheet">
+           <string notr="true">  QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+background-color: rgba(0, 0, 0, 50);
+}</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -466,6 +613,26 @@ background-image: url(:/new/prefix1/MyResources/74717143_267444830864596_8815271
         </item>
         <item>
          <widget class="QComboBox" name="comboBox_Type_Rc">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: MS Shell Dlg 2 7px;
+    min-width: 5em;
+    padding:1px;
+    background-color: rgba(0,0,0,50%);
+
+}
+QComboBox QAbstractItemView {
+border: 2px solid darkgray;
+selection-background-color: lightgray;
+color:rgb(87,117,131);
+}
+selection-color: rgba(0, 0, 0,50%);
+selection-background-color: rgba(0, 0, 0, 50);</string>
+          </property>
           <item>
            <property name="text">
             <string>Select</string>

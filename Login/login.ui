@@ -34,7 +34,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget{
-background-image: url(:/new/prefix1/MyResources/background-appromoters-advertisers-1.png);
+border-image: url(:/new/prefix1/MyResources/background-appromoters-advertisers-1.png);
 }</string>
   </property>
   <property name="windowFilePath">
@@ -368,41 +368,41 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QCommandLinkButton" name="commandLinkButton">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>530</x>
       <y>200</y>
-      <width>91</width>
-      <height>16</height>
+      <width>172</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="palette">
      <palette>
       <active>
-       <colorrole role="WindowText">
+       <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>184</red>
-          <green>188</green>
-          <blue>200</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
       </active>
       <inactive>
-       <colorrole role="WindowText">
+       <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>184</red>
-          <green>188</green>
-          <blue>200</blue>
+          <red>0</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
       </inactive>
       <disabled>
-       <colorrole role="WindowText">
+       <colorrole role="ButtonText">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
           <red>120</red>
@@ -416,6 +416,12 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
     </property>
     <property name="text">
      <string>Forgot password ? </string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -450,16 +456,8 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
      <bool>false</bool>
     </property>
     <addaction name="actionCheck_Data_Base"/>
+    <addaction name="actionSettings"/>
    </widget>
-   <widget class="QMenu" name="menuReclamation">
-    <property name="title">
-     <string>Reclamation</string>
-    </property>
-    <addaction name="actionEnvoyer_reclamation"/>
-    <addaction name="separator"/>
-    <addaction name="actionConsulter_reclamation"/>
-   </widget>
-   <addaction name="menuReclamation"/>
    <addaction name="menuCheck_DB"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -480,6 +478,11 @@ background-image: url(:/new/prefix1/MyResources/background-appromoters-advertise
    </property>
    <property name="text">
     <string>Check Data Base</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
    </property>
   </action>
  </widget>

@@ -11,6 +11,7 @@
 #include "employe.h"
 #include "gestion_des_rayons.h"
 #include "mainwindow.h"
+#include "setting.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LogIn; }
@@ -31,9 +32,12 @@ private slots:
 
     void on_actionCheck_Data_Base_triggered();
 
+    void on_actionSettings_triggered();
+
 private:
 Employe E;
 Gestion_des_Rayons G;
 MainWindow MainWindow_;
+Setting s;
 };
 #endif // LOGIN_H
