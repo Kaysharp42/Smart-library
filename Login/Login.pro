@@ -25,6 +25,7 @@ SOURCES += \
     gestion_des_rayons.cpp \
     main.cpp \
     login.cpp \
+    notification.cpp \
     rayon.cpp \
     contacts.cpp \
     event.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     etagere.h \
     gestion_des_rayons.h \
     login.h \
+    notification.h \
     rayon.h \
     contacts.h \
     event.h\

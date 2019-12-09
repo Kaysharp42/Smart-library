@@ -124,18 +124,10 @@ void LogIn::on_actionCheck_Data_Base_triggered()
         bool test=c.createconnect();
         if(test)
 {
-//Music.play();
-//Music.setLoops(-1);
-
-        QMessageBox::critical(nullptr, QObject::tr("database is open"),
-                QObject::tr("connection successful.\n"
-                          "Click Cancel to exit."), QMessageBox::Cancel);
+       N.notification_DB_succ();
         }
     } catch (QString s ) {
-       qDebug()<<s;
-       QMessageBox::critical(nullptr, QObject::tr("database is not open"),
-                QObject::tr("connection failed.\n"
-                               "Click Cancel to exit."), QMessageBox::Cancel);
+      N.notification_DB_er();
     }
 }
 

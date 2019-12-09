@@ -38,17 +38,12 @@ void Ajouter_Employe::on_commandLinkButton_clicked()
     QString Empl_Id = ui->lineEdit_Emp_id->text();
     Employe e(Empl_Id,Login_Id,Login_Pass);
     bool test=e.Ajouter_Employe();
-    QMessageBox msBox;
     if (test)
     {
-        // ui->Tab_Etudiant->setModel(attmp.Afficher());
-
-        msBox.setText("Ajouter avec succées");
-        msBox.exec();
+N.notification_ajt_scc();
     } else
     {
-        msBox.setText("Employer does not exist");
-        msBox.exec();
+N.notification_ajt_er();
     }
 }
 

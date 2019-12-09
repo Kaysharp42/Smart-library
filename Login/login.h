@@ -8,10 +8,12 @@
 #include <QSqlQuery>
 #include <QVariant>
 #include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include "employe.h"
 #include "gestion_des_rayons.h"
 #include "mainwindow.h"
 #include "setting.h"
+#include "notification.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LogIn; }
@@ -39,5 +41,6 @@ Employe E;
 Gestion_des_Rayons G;
 MainWindow MainWindow_;
 Setting s;
+Notification N;
 };
 #endif // LOGIN_H

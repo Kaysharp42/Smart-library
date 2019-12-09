@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "employe.h"
 #include "setting.h"
+#include "notification.h"
 namespace Ui {
 class Ajouter_Employe;
 }
@@ -41,6 +42,7 @@ private:
 
     Employe E;
     Setting S;
+    Notification N;
 };
 
 #endif // AJOUTER_EMPLOYE_H

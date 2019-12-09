@@ -7,12 +7,11 @@
 #include <QSound>
 #include <QObject>
 #include <QMediaBindableInterface>
+#include "notification.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QSound Music(":/new/prefix1/MyResources/firefles-dreams.wav");
-    QMediaPlayer* player;
-    QMediaPlaylist* playlist;
     LogIn w;
     w.show();  
     Connection c;
