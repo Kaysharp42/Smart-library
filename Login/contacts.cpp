@@ -65,6 +65,40 @@ query.bindValue(":id", idd);
 return    query.exec();
 }
 
+QSqlQueryModel * Contacts::trier ()
+{
+QSqlQuery *q=new QSqlQuery();
+QSqlQueryModel *model=new     QSqlQueryModel();
+q->prepare("SELECT * FROM contacts ORDER BY ID");
+q->exec();
+model->setQuery(*q);
+return model;
+}
+
+QSqlQueryModel * Contacts::rechercher(QString id)
+{
+    QSqlQueryModel *model= new QSqlQueryModel();
+    QSqlQuery q;
+    q.prepare("select * from contacts where ID like ?");
+    q.addBindValue("%"+ id +"%");
+    q.exec();
+    model->setQuery(q);
+    return (model);
+}
+
+bool Contacts::modifier(Contacts c)
+{
+   /* QSqlQuery query;
+    query.prepare("UPDATE EVENT SET  TYPE=:type,LIEU=:lieu, NUM:=num,DATEE:=datee WHERE NOM=:nom ");
+       query.bindValue(":nom", e.get_nom());
+       query.bindValue(":type", e.get_type());
+       query.bindValue(":lieu", e.get_lieu());
+       query.bindValue(":num", e.get_num());
+       query.bindValue(":datee", e.get_date());
+    return query.exec();*/
+}
+
+
 
 
 

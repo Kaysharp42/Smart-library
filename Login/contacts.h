@@ -18,6 +18,10 @@ public:
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer(int);
+    QSqlQueryModel * trier ();
+    QSqlQueryModel * rechercher(QString);
+    bool modifier(Contacts);
+
 private:
     int id, numtel;
     QString nom, prenom, profession, email;
