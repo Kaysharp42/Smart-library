@@ -17,6 +17,7 @@
 #include "connection.h"
 #include "mainwindow.h"
 #include "setting.h"
+#include "gestion_des_clients.h"
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
@@ -100,6 +101,11 @@ void LogIn::on_LoginB_clicked()
                 this->hide();
                 MainWindow_.show();
             }
+            else if (DEP=="Responsable Client")
+                        {
+                            this->hide();
+                           GC.show();
+                        }
 
          } else {
                      qDebug() << "ERROR DEP.";

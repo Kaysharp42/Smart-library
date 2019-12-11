@@ -31,7 +31,11 @@ SOURCES += \
     event.cpp \
     mainwindow.cpp \
 reclamations.cpp \
-    setting.cpp
+    setting.cpp \
+    gestion_des_clients.cpp \
+    creer_compte.cpp \
+    clients.cpp \
+    carte_fidelite.cpp
 
 
 HEADERS += \
@@ -47,7 +51,11 @@ HEADERS += \
     event.h\
     mainwindow.h \
 reclamations.h \
-    setting.h
+    setting.h \
+    gestion_des_clients.h \
+    creer_compte.h \
+    clients.h \
+    carte_fidelite.h
 
 
 FORMS += \
@@ -55,7 +63,10 @@ FORMS += \
     gestion_des_rayons.ui \
     login.ui \
 mainwindow.ui \
-    setting.ui
+    setting.ui \
+    gestion_des_clients.ui\
+    cnx.ui \
+    creer_compte.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -64,7 +75,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     MyResources.qrc \
-    Ressources.qrc
+    Ressources.qrc \
+    ressource.qrc
 
 DISTFILES += \
     customer-login-icon-27.jpg
