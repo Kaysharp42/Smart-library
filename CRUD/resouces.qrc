@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resouces/15-153148_search-magnifying-glass-icon-black-search-icon-png.png</file>
+        <file>resouces/ajouter.png</file>
+        <file>resouces/edit.png</file>
+        <file>resouces/findClicked.png</file>
+        <file>resouces/img_521151.png</file>
+        <file>resouces/kissclipart-login-png-clipart-user-computer-icons-a59899d3a10c7dde.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix2">
+        <file>resouces/15-153148_search-magnifying-glass-icon-black-search-icon-png.png</file>
+        <file>resouces/ajouter.png</file>
+        <file>resouces/edit.png</file>
+        <file>resouces/findClicked.png</file>
+        <file>resouces/img_521151.png</file>
+        <file>resouces/kissclipart-login-png-clipart-user-computer-icons-a59899d3a10c7dde.png</file>
+        <file>resouces/75369281_456114898366959_2872754137957662720_n.png</file>
+    </qresource>
+</RCC>
