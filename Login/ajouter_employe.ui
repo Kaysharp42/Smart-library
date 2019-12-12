@@ -43,7 +43,7 @@ border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_87708543598
 background-color: rgba(0, 0, 0, 0%);}</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="Ajt_Emp">
     <property name="styleSheet">

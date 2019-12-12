@@ -36,6 +36,8 @@ private slots:
 
     void on_actionSettings_triggered();
 
+    void on_pushButton_clicked();
+
 private:
 Employe E;
 Gestion_des_Rayons G;

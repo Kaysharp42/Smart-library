@@ -62,6 +62,8 @@ void LogIn::on_LoginB_clicked()
     query.prepare(select);
     query.addBindValue(ui->lineEdit_UserID->text());
     query.addBindValue(ui->lineEdit_Password->text());
+
+
  query.exec();
  if (query.exec())
      {
@@ -143,4 +145,9 @@ void LogIn::on_actionCheck_Data_Base_triggered()
 void LogIn::on_actionSettings_triggered()
 {
 s.show();
+}
+
+void LogIn::on_pushButton_clicked()
+{
+    MainWindow_.show();
 }

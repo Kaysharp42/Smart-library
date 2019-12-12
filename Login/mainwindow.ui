@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>487</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,48 +17,13 @@
    <string notr="true">background-image: url(:/new/prefix1/MyResources/39496316340_66986bb280_b.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QSlider" name="sliderVolume">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>30</y>
-      <width>160</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-    </property>
-    <property name="value">
-     <number>99</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="SliderProgress">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>0</y>
-      <width>160</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="tabWidget_2">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>60</y>
       <width>791</width>
-      <height>381</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -76,74 +41,32 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>791</width>
+        <width>771</width>
         <height>421</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/new/prefix1/MyResources/39496316340_66986bb280_b.jpg);</string>
+       <string notr="true">background-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Ajouter un evenement</string>
        </attribute>
-       <widget class="QLineEdit" name="lineEdit_id">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>90</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_prenom">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>190</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pb_ajouter">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>280</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/img/Ressources/ajouter.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_10">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>10</y>
-          <width>221</width>
-          <height>21</height>
+          <x>240</x>
+          <y>20</y>
+          <width>341</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>20</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -155,199 +78,212 @@
          <string>Ajout d'un évemenemt</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>190</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Lieu</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>130</y>
-          <width>141</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Gerer Contacts</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>120</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Type</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
+       <widget class="QCommandLinkButton" name="ajouter_event">
         <property name="geometry">
          <rect>
           <x>410</x>
+          <y>290</y>
+          <width>187</width>
+          <height>39</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
           <y>60</y>
-          <width>47</width>
-          <height>13</height>
+          <width>311</width>
+          <height>221</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Invités:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>160</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Date</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="geometry">
-         <rect>
-          <x>574</x>
-          <y>280</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);
-background-image: url(:/img/Ressources/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>90</y>
-          <width>91</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Nombre d'invités</string>
-        </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>90</y>
-          <width>42</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_12">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>90</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Nom</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>60</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>60</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Numero</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_2">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>120</y>
-          <width>111</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QDateTimeEdit" name="dateTimeEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>160</y>
-          <width>111</width>
-          <height>22</height>
-         </rect>
-        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Numero</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Nom</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_id">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="comboBox_2">
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+           <property name="styleSheet">
+            <string notr="true">QDateTime {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Lieu</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_14">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_2">
@@ -357,15 +293,15 @@ background-image: url(:/img/Ressources/fermer.png);</string>
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>150</x>
           <y>20</y>
-          <width>221</width>
+          <width>301</width>
           <height>21</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>18</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -375,23 +311,6 @@ background-image: url(:/img/Ressources/fermer.png);</string>
         </property>
         <property name="text">
          <string>Liste des évenements</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_11">
-        <property name="geometry">
-         <rect>
-          <x>560</x>
-          <y>290</y>
-          <width>91</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/img/Ressources/fermer.png);
-background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
         </property>
        </widget>
        <widget class="QTableView" name="tableView_4">
@@ -404,52 +323,87 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true"/>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>30</x>
           <y>290</y>
-          <width>75</width>
-          <height>23</height>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true">QPushButton
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
         </property>
         <property name="text">
          <string>Trier</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>290</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Rechercher</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="lineEdit_6">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>220</x>
           <y>290</y>
-          <width>113</width>
-          <height>20</height>
+          <width>171</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>280</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -457,55 +411,89 @@ background-image: url(:/new/prefix1/fermer.png);</string>
        <attribute name="title">
         <string>Supprimer un evenement</string>
        </attribute>
-       <widget class="QLineEdit" name="lineEdit_id_2">
+       <widget class="QCommandLinkButton" name="supprimer_event">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>40</y>
-          <width>261</width>
-          <height>31</height>
+          <x>490</x>
+          <y>190</y>
+          <width>131</width>
+          <height>41</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>50</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
         </property>
         <property name="text">
-         <string>Numero event</string>
+         <string>Supprimer </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>
+          <disabledoff>:/new/prefix1/MyResources/delete.png</disabledoff>
+          <disabledon>:/new/prefix1/MyResources/deleteClicked.png</disabledon>
+          <selectedoff>:/new/prefix1/MyResources/delete.png</selectedoff>
+          <selectedon>:/new/prefix1/MyResources/deleteClicked.png</selectedon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="pb_supprimer">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>390</x>
+          <x>140</x>
           <y>120</y>
-          <width>91</width>
-          <height>23</height>
+          <width>431</width>
+          <height>41</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/supprimer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Numero event</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_id_2">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_15">
@@ -553,6 +541,17 @@ background-image: url(:/new/prefix1/fermer.png);</string>
           <height>31</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+        </property>
        </widget>
        <widget class="QLabel" name="label_26">
         <property name="geometry">
@@ -596,7 +595,15 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">QComboBox {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_37">
@@ -635,7 +642,15 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="lineEdit_13">
@@ -648,7 +663,15 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_36">
@@ -713,120 +736,17 @@ background-image: url(:/new/prefix1/fermer.png);</string>
        <string notr="true">background-image: url(:/new/prefix1/MyResources/39496316340_66986bb280_b.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
         <string>Ajouter un contact</string>
        </attribute>
-       <widget class="QLabel" name="label_18">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>230</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Email</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_19">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>260</y>
-          <width>111</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Numéro de telephone</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="dateEdit_4">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>170</y>
-          <width>131</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>200</y>
-          <width>161</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_17">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>200</y>
-          <width>51</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Profession</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_32">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>140</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Sexe</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_4">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>80</y>
-          <width>171</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton_21">
         <property name="geometry">
          <rect>
-          <x>464</x>
-          <y>280</y>
+          <x>510</x>
+          <y>240</y>
           <width>81</width>
           <height>23</height>
          </rect>
@@ -861,191 +781,283 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          <string>Ajout d'un contact</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox">
+       <widget class="QCommandLinkButton" name="ajouter_event_2">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>290</y>
+          <width>187</width>
+          <height>39</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>150</x>
-          <y>140</y>
-          <width>70</width>
-          <height>17</height>
+          <y>40</y>
+          <width>301</width>
+          <height>231</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Homme</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>260</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>230</y>
-          <width>171</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_5">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>110</y>
-          <width>171</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_15">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>110</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Prenom</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_2">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>140</y>
-          <width>70</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Femme</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_14">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>80</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Nom</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_16">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>170</y>
-          <width>91</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Date de naissance</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_22">
-        <property name="geometry">
-         <rect>
-          <x>560</x>
-          <y>280</y>
-          <width>81</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>50</y>
-          <width>171</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>50</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Num</string>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Num</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Nom</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Prenom</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_5">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Date de naissance</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2" colspan="2">
+          <widget class="QDateEdit" name="dateEdit_4">
+           <property name="styleSheet">
+            <string notr="true">QDateTime
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Profession</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_7">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEdit_8">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="3">
+          <widget class="QLabel" name="label_19">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Numéro de telephone</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QLineEdit" name="lineEdit_9">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
         <string>Afficher les contacts</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_13">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>300</y>
-          <width>81</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton_12">
         <property name="geometry">
          <rect>
@@ -1056,7 +1068,16 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/img/Ressources/modifier.png);</string>
+         <string notr="true">QPushButton
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
         </property>
         <property name="text">
          <string>Trier</string>
@@ -1066,65 +1087,83 @@ background-image: url(:/new/prefix1/fermer.png);</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>60</y>
+          <y>50</y>
           <width>631</width>
           <height>231</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true"/>
         </property>
        </widget>
        <widget class="QLabel" name="label_33">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>20</y>
+          <x>230</x>
+          <y>10</y>
           <width>221</width>
-          <height>21</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>16</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Liste des contacts</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_14">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>300</y>
-          <width>91</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/img/Ressources/supprimer.png);</string>
-        </property>
-        <property name="text">
-         <string>Rechercher</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="lineEdit_11">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>300</y>
-          <width>113</width>
-          <height>20</height>
+          <x>220</x>
+          <y>290</y>
+          <width>181</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>290</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -1132,55 +1171,89 @@ background-image: url(:/new/prefix1/fermer.png);</string>
        <attribute name="title">
         <string>Supprimer un contact</string>
        </attribute>
-       <widget class="QLineEdit" name="lineEdit_id_4">
+       <widget class="QCommandLinkButton" name="supprimer_contact">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>30</y>
-          <width>113</width>
-          <height>21</height>
+          <x>440</x>
+          <y>200</y>
+          <width>131</width>
+          <height>41</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_21">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>30</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
         </property>
         <property name="text">
-         <string>Num</string>
+         <string>Supprimer </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>
+          <disabledoff>:/new/prefix1/MyResources/delete.png</disabledoff>
+          <disabledon>:/new/prefix1/MyResources/deleteClicked.png</disabledon>
+          <selectedoff>:/new/prefix1/MyResources/delete.png</selectedoff>
+          <selectedon>:/new/prefix1/MyResources/deleteClicked.png</selectedon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="pb_supprimer_2">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>90</y>
-          <width>91</width>
-          <height>23</height>
+          <x>170</x>
+          <y>120</y>
+          <width>431</width>
+          <height>81</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/supprimer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_21">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Numero contact</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_id_4">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
@@ -1199,10 +1272,10 @@ background-image: url(:/new/prefix1/fermer.png);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/bgg.jpg);</string>
+       <string notr="true">background-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">
@@ -1211,15 +1284,38 @@ background-image: url(:/new/prefix1/fermer.png);</string>
        <widget class="QLabel" name="label_22">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>241</width>
-          <height>21</height>
+          <x>220</x>
+          <y>10</y>
+          <width>341</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Ajout d'une réclamation</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>60</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -1228,129 +1324,20 @@ background-image: url(:/new/prefix1/fermer.png);</string>
          <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
         </property>
         <property name="text">
-         <string>Ajout d'une réclamation</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_23">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>290</y>
-          <width>81</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_28">
-        <property name="geometry">
-         <rect>
-          <x>360</x>
-          <y>80</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
          <string>Texte</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>90</y>
-          <width>131</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_27">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>180</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Rédacteur</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_24">
-        <property name="geometry">
-         <rect>
-          <x>464</x>
-          <y>290</y>
-          <width>71</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/ajouter.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_23">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>90</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Titre</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_24">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>120</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Type</string>
         </property>
        </widget>
        <widget class="QTextEdit" name="textEdit">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>100</y>
+          <x>400</x>
+          <y>80</y>
           <width>281</width>
           <height>151</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true"/>
         </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1360,188 +1347,202 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_12">
+       <widget class="QCommandLinkButton" name="ajouter_rec">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>180</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_25">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>150</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Date</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>120</y>
-          <width>131</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_30">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>60</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-        <property name="text">
-         <string>Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_3">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>60</y>
-          <width>131</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QDateTimeEdit" name="dateTimeEdit">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>150</y>
-          <width>131</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>290</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>TRIER EVENT</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_8">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>280</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>MAIL</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_13">
-       <attribute name="title">
-        <string>Page</string>
-       </attribute>
-       <widget class="QLabel" name="label_40">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
+          <x>540</x>
           <y>260</y>
-          <width>55</width>
-          <height>28</height>
+          <width>121</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="text">
-         <string>Message:</string>
+         <string>Ajouter </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/newajouter.png</normaloff>:/new/prefix1/MyResources/newajouter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="msg">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>260</y>
-          <width>377</width>
-          <height>51</height>
+          <x>130</x>
+          <y>70</y>
+          <width>221</width>
+          <height>171</height>
          </rect>
         </property>
-       </widget>
-       <widget class="QLabel" name="label_38">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>220</y>
-          <width>20</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>File</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="file">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>230</y>
-          <width>312</width>
-          <height>22</height>
-         </rect>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_30">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Num</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Titre</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_10">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="2">
+          <widget class="QComboBox" name="comboBox">
+           <property name="styleSheet">
+            <string>background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_25">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="2">
+          <widget class="QDateTimeEdit" name="dateTimeEdit">
+           <property name="styleSheet">
+            <string>background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QLabel" name="label_27">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string>background-image: url(:/new/prefix1/white.jpg);</string>
+           </property>
+           <property name="text">
+            <string>Rédacteur</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="lineEdit_12">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
         <string>Afficher les reclamations</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_16">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>300</y>
-          <width>91</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_29">
         <property name="geometry">
          <rect>
@@ -1571,11 +1572,83 @@ p, li { white-space: pre-wrap; }
           <x>40</x>
           <y>50</y>
           <width>631</width>
-          <height>231</height>
+          <height>191</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+         <string notr="true"/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>270</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+        </property>
+        <property name="text">
+         <string>TRIER</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_15">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>270</y>
+          <width>181</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>260</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/icons8-search-512.png</normaloff>:/new/prefix1/MyResources/icons8-search-512.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -1583,50 +1656,87 @@ p, li { white-space: pre-wrap; }
        <attribute name="title">
         <string>Supprimer une reclamation</string>
        </attribute>
-       <widget class="QLineEdit" name="lineEdit_id_6">
+       <widget class="QCommandLinkButton" name="supprimer_event_2">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>100</y>
-          <width>113</width>
-          <height>20</height>
+          <x>490</x>
+          <y>160</y>
+          <width>131</width>
+          <height>41</height>
          </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_31">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>100</y>
-          <width>61</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string>background-image: url(:/new/prefix1/white.jpg);</string>
         </property>
         <property name="text">
-         <string>Num</string>
+         <string>Supprimer </string>
+        </property>
+        <property name="icon">
+         <iconset resource="MyResources.qrc">
+          <normaloff>:/new/prefix1/MyResources/delete.png</normaloff>
+          <normalon>:/new/prefix1/MyResources/deleteClicked.png</normalon>
+          <disabledoff>:/new/prefix1/MyResources/delete.png</disabledoff>
+          <disabledon>:/new/prefix1/MyResources/deleteClicked.png</disabledon>
+          <selectedoff>:/new/prefix1/MyResources/delete.png</selectedoff>
+          <selectedon>:/new/prefix1/MyResources/deleteClicked.png</selectedon>:/new/prefix1/MyResources/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="pb_supprimer_3">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>140</y>
-          <width>81</width>
-          <height>23</height>
+          <x>160</x>
+          <y>100</y>
+          <width>401</width>
+          <height>31</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-image: url(:/new/prefix1/fermer.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_31">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Numero event</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_id_6">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 7px;
+    min-width: 5em;
+    padding:3px;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_14">
@@ -1637,69 +1747,119 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_20">
+   <widget class="QCommandLinkButton" name="quit_ajouter_event">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>530</x>
+      <y>20</y>
+      <width>186</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Disconnect</string>
+    </property>
+    <property name="icon">
+     <iconset resource="MyResources.qrc">
+      <normaloff>:/new/prefix1/MyResources/logout-icon.png</normaloff>:/new/prefix1/MyResources/logout-icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
       <y>0</y>
-      <width>47</width>
-      <height>13</height>
+      <width>215</width>
+      <height>54</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-    </property>
-    <property name="text">
-     <string>Progress</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>0</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 170, 127);</string>
-    </property>
-    <property name="text">
-     <string>Start</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_34">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>30</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
-    </property>
-    <property name="text">
-     <string>Volume</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_7">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>30</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 170, 127);</string>
-    </property>
-    <property name="text">
-     <string>Stop</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_20">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+       </property>
+       <property name="text">
+        <string>Progress</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSlider" name="SliderProgress">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    min-width: 5em;
+    padding:3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Start</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_34">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+       </property>
+       <property name="text">
+        <string>Volume</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSlider" name="sliderVolume">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/new/prefix1/white.jpg);</string>
+       </property>
+       <property name="value">
+        <number>99</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    min-width: 5em;
+    padding:3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Stop</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1714,6 +1874,8 @@ p, li { white-space: pre-wrap; }
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="MyResources.qrc"/>
+ </resources>
  <connections/>
 </ui>

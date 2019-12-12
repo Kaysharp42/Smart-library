@@ -72,6 +72,26 @@ private slots:
 
     void on_pushButton_ModifierEvent_clicked();
 
+    void on_ajouter_event_clicked();
+
+    void on_quit_ajouter_event_clicked();
+
+    void on_pushButton_22_clicked();
+
+    void on_ajouter_event_2_clicked();
+
+    void on_supprimer_event_clicked();
+
+    void on_supprimer_contact_clicked();
+
+    void on_ajouter_rec_clicked();
+
+    void on_lineEdit_11_textChanged(const QString &arg1);
+
+    void on_pushButton_14_clicked();
+
+    void on_supprimer_event_2_clicked();
+
 private:
     Ui::MainWindow *ui;
      Event tmpevent;

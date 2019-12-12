@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QSystemTrayIcon>
 #include "reclamations.h"
+#include <QSound>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -61,59 +62,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//ajouter evenement
-void MainWindow::on_pb_ajouter_clicked()
-{
-    int num= ui->lineEdit->text().toInt();
-    QString nom = ui->lineEdit_id->text();
-    QString type= ui->comboBox_2->currentText();
-    QString lieu= ui->lineEdit_prenom->text();
-    QDateTime datee=ui->dateTimeEdit_2->dateTime();
-    Event e(num, nom, type, datee, lieu);
-    bool test=e.ajouter();
-    if(test)
-    {
-      ui->tableView_4->setModel(tmpevent.afficher());//refresh
-      QMessageBox::information(nullptr, QObject::tr("Ajouter un event"),
-                  QObject::tr("Event ajouté.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-    else
-      QMessageBox::critical(nullptr, QObject::tr("Ajouter un event"),
-                  QObject::tr("Erreur !.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-}
-
-//supprimer event
-void MainWindow::on_pb_supprimer_clicked()
-{
-    int num = ui->lineEdit_id_2->text().toInt();
-    bool test=tmpevent.supprimer(num);
-    if(test)
-    {ui->tableView_4->setModel(tmpevent.afficher()); //refresh
-        QMessageBox::information(nullptr, QObject::tr("Supprimer un évenement"),
-                    QObject::tr("Evenement supprimé.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-    else
-        QMessageBox::critical(nullptr, QObject::tr("Supprimer un évenement"),
-                    QObject::tr("Erreur !.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
-
-//Trier evenements
+//trier event
 void MainWindow::on_pushButton_clicked()
 {
-    Event e;
-    ui->tableView_4->setModel(e.trier());
-}
-
-//trier evenements
-void MainWindow::on_pushButton_2_clicked()
-{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     Event e;
     ui->tableView_4->setModel(e.trier());
 }
@@ -121,127 +74,13 @@ void MainWindow::on_pushButton_2_clicked()
 //Chercher Event
 void MainWindow::on_pushButton_4_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     QString cherch = ui->lineEdit_6->text();
     ui->tableView_4->setModel(tmpevent.rechercher(cherch));
 }
 
-
-
-
-//fermer ajouter reclamation
-void MainWindow::on_pushButton_23_clicked()
-{
-    this->close();
-}
-
-//supprimer reclamation
-void MainWindow::on_pushButton_15_clicked()
-{
-    int num = ui->lineEdit_id_6->text().toInt();
-    bool test=tmprec.supprimer(num);
-    if(test)
-    {
-        ui->tableView_3->setModel(tmprec.afficher()); //refresh
-        /*QMessageBox::information(nullptr, QObject::tr("Supprimer une reclamation"),
-                    QObject::tr("Reclamation supprimée.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);*/
-
-    }
-    else
-        QMessageBox::critical(nullptr, QObject::tr("Supprimer une reclamation"),
-                    QObject::tr("Erreur !.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
-
-//ajouter reclamation
-void MainWindow::on_pushButton_24_clicked()
-{
-
-    int num= ui->lineEdit_3->text().toInt();
-    QString titre = ui->lineEdit_10->text();
-    QString redaction= ui->lineEdit_12->text();
-    Reclamations r(num, titre, redaction);
-  bool test=r.ajouter();
-  if(test)
-    {ui->tableView_3->setModel(tmprec.afficher());//refresh
-    QMessageBox::information(nullptr, QObject::tr("Ajouter une reclamation"),
-                  QObject::tr("Reclamation ajoutée.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-  else
-      QMessageBox::critical(nullptr, QObject::tr("Ajouter une reclamation"),
-                  QObject::tr("Erreur !.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-}
-
-
-//ajouter contacts
-void MainWindow::on_pushButton_21_clicked()
-{
-    int id= ui->lineEdit_2->text().toInt();
-    QString nom = ui->lineEdit_4->text();
-    QString prenom= ui->lineEdit_5->text();
-    QString profession= ui->lineEdit_7->text();
-    QString email= ui->lineEdit_8->text();
-    int numTel= ui->lineEdit_9->text().toInt();
-    Contacts c(id, nom, prenom, profession, email, numTel);
-  bool test=c.ajouter();
-  if(test)
-    {ui->tableView_2->setModel(tmpcontact.afficher());//refresh
-    QMessageBox::information(nullptr, QObject::tr("Ajouter un contact"),
-                  QObject::tr("Contact ajouté.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-  else
-      QMessageBox::critical(nullptr, QObject::tr("Ajouter un contact"),
-                  QObject::tr("Erreur !.\n"
-                              "Click Cancel to exit."), QMessageBox::Cancel);
-
-
-}
-
-
-void MainWindow::on_pb_supprimer_2_clicked()
-{
-    int num = ui->lineEdit_id_4->text().toInt();
-    bool test=tmpcontact.supprimer(num);
-    if(test)
-    {ui->tableView_2->setModel(tmpcontact.afficher()); //refresh
-        QMessageBox::information(nullptr, QObject::tr("Supprimer un contact"),
-                    QObject::tr("Contact supprimé.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-    else
-        QMessageBox::critical(nullptr, QObject::tr("Supprimer un contact"),
-                    QObject::tr("Erreur !.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-
-}
-
-/*
- * //QMessageBox::aboutQt(this, tr("about QT"));
-    if (QSystemTrayIcon::isSystemTrayAvailable() == false)
-    {
-        QMessageBox::critical(nullptr, QObject::tr("Afficher message"),
-                    QObject::tr("Erreur !.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, QObject::tr("Afficher message"),
-                    QObject::tr("OKKKKKKKKKKK !.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-    }
-    mSystemTrayIcon->showMessage("Message", "montrer message", QIcon(":/myappico"), 3000 );
- */
-
+//MUSIQUE
 void MainWindow::on_SliderProgress_sliderMoved(int position)
 {
     player->setPosition(position);
@@ -253,10 +92,11 @@ void MainWindow::on_sliderVolume_actionTriggered(int position)
     player->setVolume(position);
 
 }
-
 //start music
 void MainWindow::on_pushButton_5_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     //load the file
     player->setMedia(QUrl ::fromLocalFile("C:/Users/sarra_000/Desktop/SVN/trunk/ChirineProjet/music.mp3"));
     player->play();
@@ -282,14 +122,8 @@ void MainWindow::on_duration_Changed(int position)
 
 }
 
-void MainWindow::on_pushButton_6_clicked()
-{
-    this->close();
-}
-
 void MainWindow::on_pushButton_11_clicked()
 {
-    this->close();
 }
 
 //rechercher
@@ -299,22 +133,36 @@ void MainWindow::on_lineEdit_6_textChanged(const QString &arg1)
 
 }
 
-void MainWindow::on_pushButton_8_clicked()
+//EVENEMENTS
+//ajouter evenement
+void MainWindow::on_supprimer_event_clicked()
 {
-    //Smtp *newMail  = new Smtp("chirine.nasri@esprit.tn","chirinenasri13@gmail.com"," Your Subject","My body text");
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    int num = ui->lineEdit_id_2->text().toInt();
+    bool test=tmpevent.supprimer(num);
+    if(test)
+    {ui->tableView_4->setModel(tmpevent.afficher()); //refresh
+        QMessageBox::information(nullptr, QObject::tr("Supprimer un évenement"),
+                    QObject::tr("Evenement supprimé.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Supprimer un évenement"),
+                    QObject::tr("Erreur !.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+
 }
 
-//bech temchi interface mail
-/*void MainWindow::on_sendBtn_clicked()
-{
-    mail m;
-    m.exec();
-}
-*/
+
 
 //OK apres avoir choisi le nom de l evenement
 void MainWindow::on_pushButton_9_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
    QString val=ui->comboBox_3->currentText();
    QSqlQuery query;
    query.prepare("select * from EVENT where NOM='"+val+"'");
@@ -332,6 +180,8 @@ void MainWindow::on_pushButton_9_clicked()
 
 void MainWindow::on_pushButton_ModifierEvent_clicked()
 {
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
     int num= ui->lineEdit_13->text().toInt();
     QString nom = ui->comboBox_3->currentText();
     QString type= ui->comboBox_4->currentText();
@@ -352,3 +202,164 @@ void MainWindow::on_pushButton_ModifierEvent_clicked()
                     QObject::tr("Erreur !.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 }
+
+void MainWindow::on_ajouter_event_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    int num= ui->lineEdit->text().toInt();
+    QString nom = ui->lineEdit_id->text();
+    QString type= ui->comboBox_2->currentText();
+    QString lieu= ui->lineEdit_prenom->text();
+    QDateTime datee=ui->dateTimeEdit_2->dateTime();
+    Event e(num, nom, type, datee, lieu);
+    bool test=e.ajouter();
+    if(test)
+    {
+      ui->tableView_4->setModel(tmpevent.afficher());//refresh
+      QMessageBox::information(nullptr, QObject::tr("Ajouter un event"),
+                  QObject::tr("Event ajouté.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+    else
+      QMessageBox::critical(nullptr, QObject::tr("Ajouter un event"),
+                  QObject::tr("Erreur !.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+
+void MainWindow::on_quit_ajouter_event_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    this->close();
+}
+
+
+
+
+
+//CONTACTS
+//ajouter contact
+void MainWindow::on_ajouter_event_2_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    int id= ui->lineEdit_2->text().toInt();
+    QString nom = ui->lineEdit_4->text();
+    QString prenom= ui->lineEdit_5->text();
+    QString profession= ui->lineEdit_7->text();
+    QString email= ui->lineEdit_8->text();
+    int numTel= ui->lineEdit_9->text().toInt();
+    Contacts c(id, nom, prenom, profession, email, numTel);
+  bool test=c.ajouter();
+  if(test)
+    {ui->tableView_2->setModel(tmpcontact.afficher());//refresh
+    QMessageBox::information(nullptr, QObject::tr("Ajouter un contact"),
+                  QObject::tr("Contact ajouté.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+  else
+      QMessageBox::critical(nullptr, QObject::tr("Ajouter un contact"),
+                  QObject::tr("Erreur !.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+
+//supprimer contact
+void MainWindow::on_supprimer_contact_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+     Clicked.play();
+   int num = ui->lineEdit_id_4->text().toInt();
+    bool test=tmpcontact.supprimer(num);
+    if(test)
+       {ui->tableView_2->setModel(tmpcontact.afficher()); //refresh
+           QMessageBox::information(nullptr, QObject::tr("Supprimer un contact"),
+              QObject::tr("Contact supprimé.\n"
+       "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+   else
+          QMessageBox::critical(nullptr, QObject::tr("Supprimer un contact"),
+        QObject::tr("Erreur !.\n"
+     "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+
+//chercher contact
+void MainWindow::on_lineEdit_11_textChanged(const QString &arg1)
+{
+    ui->tableView_2->setModel(tmpcontact.rechercher(arg1));
+}
+//chercher contact bouton
+void MainWindow::on_pushButton_14_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    QString cherch = ui->lineEdit_11->text();
+    ui->tableView_2->setModel(tmpcontact.rechercher(cherch));
+}
+
+//RECLAMATIONS
+
+//ajouter reclamation
+void MainWindow::on_ajouter_rec_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+
+    int num= ui->lineEdit_3->text().toInt();
+    QString titre = ui->lineEdit_10->text();
+    QString redaction= ui->lineEdit_12->text();
+    Reclamations r(num, titre, redaction);
+  bool test=r.ajouter();
+  if(test)
+    {ui->tableView_3->setModel(tmprec.afficher());//refresh
+    QMessageBox::information(nullptr, QObject::tr("Ajouter une reclamation"),
+                  QObject::tr("Reclamation ajoutée.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+  else
+      QMessageBox::critical(nullptr, QObject::tr("Ajouter une reclamation"),
+                  QObject::tr("Erreur !.\n"
+                              "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+
+//supprimer reclamation
+void MainWindow::on_supprimer_event_2_clicked()
+{
+    QSound Clicked(":/new/prefix1/MyResources/Click.wav");
+    Clicked.play();
+    int num = ui->lineEdit_id_6->text().toInt();
+    bool test=tmprec.supprimer(num);
+    if(test)
+    {
+        ui->tableView_3->setModel(tmprec.afficher()); //refresh
+        /*QMessageBox::information(nullptr, QObject::tr("Supprimer une reclamation"),
+                    QObject::tr("Reclamation supprimée.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);*/
+
+    }
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Supprimer une reclamation"),
+                    QObject::tr("Erreur !.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+}
+
+
+void MainWindow::on_pushButton_15_clicked(){}
+void MainWindow::on_pb_ajouter_clicked(){}
+void MainWindow::on_pb_supprimer_clicked(){}
+void MainWindow::on_pushButton_2_clicked(){}
+void MainWindow::on_pushButton_23_clicked(){}
+void MainWindow::on_pushButton_22_clicked(){}
+void MainWindow::on_pushButton_24_clicked(){}
+void MainWindow::on_pushButton_21_clicked(){}
+void MainWindow::on_pb_supprimer_2_clicked(){}
+void MainWindow::on_pushButton_8_clicked(){}
+
