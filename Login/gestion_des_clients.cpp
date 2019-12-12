@@ -10,7 +10,6 @@ Gestion_des_clients::Gestion_des_clients(QWidget *parent)
     , ui(new Ui::Gestion_des_clients)
 {
     ui->setupUi(this);
-    ui->setupUi(this);
     ui->tabetudiant->setModel(tmpetudiant.afficher());
     QPixmap pic(":/img/IMAGE6.jpg");
     //ui->label_6->setPixmap(pic);

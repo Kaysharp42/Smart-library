@@ -11,10 +11,11 @@
 #include <QtWidgets/QMessageBox>
 #include "employe.h"
 #include "gestion_des_rayons.h"
-#include "mainwindow.h"
 #include "setting.h"
 #include "notification.h"
 #include "gestion_des_clients.h"
+#include "gestion.h"
+#include "gestion_rh.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class LogIn; }
 QT_END_NAMESPACE
@@ -36,14 +37,14 @@ private slots:
 
     void on_actionSettings_triggered();
 
-    void on_pushButton_clicked();
 
 private:
 Employe E;
 Gestion_des_Rayons G;
-MainWindow MainWindow_;
 Setting s;
 Notification N;
 Gestion_des_clients GC;
+MainWindow C;
+Gestion_RH M;
 };
 #endif // LOGIN_H

@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui network printsupport  serialport  \
+            multimedia multimediawidgets
 QT += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,13 +30,21 @@ SOURCES += \
     rayon.cpp \
     contacts.cpp \
     event.cpp \
-    mainwindow.cpp \
 reclamations.cpp \
     setting.cpp \
     gestion_des_clients.cpp \
     creer_compte.cpp \
     clients.cpp \
-    carte_fidelite.cpp
+    carte_fidelite.cpp\
+    Gestion.cpp \
+    commande.cpp \
+    livraison.cpp \
+    paiement.cpp \
+    qcustomplot.cpp \
+    smtp.cpp\
+gestion_rh.cpp
+
+
 
 
 HEADERS += \
@@ -49,24 +58,33 @@ HEADERS += \
     rayon.h \
     contacts.h \
     event.h\
-    mainwindow.h \
 reclamations.h \
     setting.h \
     gestion_des_clients.h \
     creer_compte.h \
     clients.h \
-    carte_fidelite.h
+    carte_fidelite.h\
+    commande.h \
+    gestion.h \
+    livraison.h \
+    paiement.h \
+    qcustomplot.h \
+    smtp.h\
+gestion_rh.h
+
 
 
 FORMS += \
     ajouter_employe.ui \
     gestion_des_rayons.ui \
     login.ui \
-mainwindow.ui \
     setting.ui \
     gestion_des_clients.ui\
-    cnx.ui \
-    creer_compte.ui
+    creer_compte.ui\
+    gestion.ui\
+gestion_rh.ui
+
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

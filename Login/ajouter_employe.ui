@@ -43,7 +43,7 @@ border-image: url(:/new/prefix1/MyResources/59524298_595553970930082_87708543598
 background-color: rgba(0, 0, 0, 0%);}</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="Ajt_Emp">
     <property name="styleSheet">
@@ -58,7 +58,7 @@ background-color: rgba(0, 0, 0, 0%);}</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>190</y>
+       <y>200</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -75,8 +75,8 @@ background-color: rgba(0, 0, 0, 0%);}</string>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>230</y>
+       <x>0</x>
+       <y>240</y>
        <width>171</width>
        <height>51</height>
       </rect>
@@ -114,7 +114,7 @@ background-color: rgba(0, 0, 0, 0%);}</string>
        <x>180</x>
        <y>150</y>
        <width>151</width>
-       <height>20</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -123,7 +123,7 @@ background-color: rgba(0, 0, 0, 0%);}</string>
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: bold 7px;
+    font: bold 12px;
     min-width: 5em;
     padding:3px;
 background-color: rgba(0, 0, 0, 50);
@@ -137,7 +137,7 @@ background-color: rgba(0, 0, 0, 50);
        <x>180</x>
        <y>200</y>
        <width>151</width>
-       <height>20</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -146,7 +146,7 @@ background-color: rgba(0, 0, 0, 50);
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: bold 7px;
+    font: bold 12px;
     min-width: 5em;
     padding:3px;
 background-color: rgba(0, 0, 0, 50);
@@ -159,7 +159,7 @@ background-color: rgba(0, 0, 0, 50);
        <x>180</x>
        <y>250</y>
        <width>151</width>
-       <height>20</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -168,7 +168,7 @@ background-color: rgba(0, 0, 0, 50);
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: bold 7px;
+    font: bold 12px;
     min-width: 5em;
     padding:3px;
 background-color: rgba(0, 0, 0, 50);
@@ -417,7 +417,7 @@ QTableView::item:selected
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: bold 7px;
+    font: bold 12px;
     min-width: 5em;
     padding:3px;
 background-color: rgba(0, 0, 0, 50);
@@ -532,7 +532,7 @@ QTableView::item:selected
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>390</x>
        <y>190</y>
        <width>91</width>
        <height>31</height>
@@ -560,7 +560,7 @@ QTableView::item:selected
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>381</width>
+       <width>461</width>
        <height>151</height>
       </rect>
      </property>
@@ -587,7 +587,7 @@ QTableView::item:selected
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: bold 7px;
+    font: bold 12px;
     min-width: 5em;
     padding:3px;
 background-color: rgba(0, 0, 0, 50);
@@ -619,7 +619,7 @@ background-color: rgba(0, 0, 0, 50);
     border-width: 2px;
     border-radius: 10px;
     border-color: beige;
-    font: MS Shell Dlg 2 7px;
+    font: MS Shell Dlg 2 12px;
     min-width: 5em;
     padding:1px;
     background-color: rgba(0,0,0,50%);

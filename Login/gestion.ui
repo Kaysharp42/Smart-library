@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1498</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QToolBox" name="toolBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1091</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Georgia</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1091</width>
+       <height>485</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Gestion des commandes</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>10</y>
+        <width>1041</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Simplified Arabic Fixed</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>AJOUT</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_9">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>60</y>
+          <width>238</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QSplitter" name="splitter_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="reference_6">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID CMD :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference_4">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>DATE CMD :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID CLIENT :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="quantite">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID PAIEMENT :</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QSplitter" name="splitter_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLineEdit" name="cin"/>
+          <widget class="QLineEdit" name="nom"/>
+          <widget class="QLineEdit" name="prenom"/>
+          <widget class="QLineEdit" name="matricule"/>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="ajouter">
+         <property name="text">
+          <string>Ajouter commande</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QComboBox" name="idclient">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>170</y>
+          <width>73</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="idp">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>220</y>
+          <width>73</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="refresh2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>MODIFICATION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_5">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>20</y>
+          <width>481</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLabel" name="label_18">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Saisir l'identifiant de la commande à modifier :</string>
+          </property>
+         </widget>
+         <widget class="QSplitter" name="splitter_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QSplitter" name="splitter">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QLabel" name="reference_8">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID CMD :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="quantite_8">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>DATE CMD :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="prix_7">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID CLIENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_7">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID PAIEMENT :</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QSplitter" name="splitter_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QComboBox" name="comboBox_3"/>
+           <widget class="QLineEdit" name="nom_4"/>
+           <widget class="QLineEdit" name="prenom_4"/>
+           <widget class="QLineEdit" name="matricule_4"/>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="modifier_2">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Modifier commande</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>AFFICHAGE</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_11">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>481</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_31">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID CMD :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_19"/>
+         <widget class="QCheckBox" name="checkBox_2">
+          <property name="text">
+           <string>decroissant</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QTableView" name="tabemployer"/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>SUPPRESSION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_13">
+        <property name="geometry">
+         <rect>
+          <x>98</x>
+          <y>106</y>
+          <width>431</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QLabel" name="label_20">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir l'identifiant de la commande à supprimer:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="reference_sup_4">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID CMD :</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_5"/>
+         <widget class="QLineEdit" name="sup">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="supprimer">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Supprimer Commande</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>envoyer email</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>20</y>
+          <width>631</width>
+          <height>380</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_3">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::ExpandingFieldsGrow</enum>
+         </property>
+         <property name="rowWrapPolicy">
+          <enum>QFormLayout::WrapLongRows</enum>
+         </property>
+         <property name="verticalSpacing">
+          <number>9</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>Smtp-server:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Server port:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>mdp</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string>destinataire</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>sujet</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>message</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="server_3">
+           <property name="text">
+            <string>smtp.gmail.com</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="port_3">
+           <property name="text">
+            <string>465</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="uname_3"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="paswd_3">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="rcpt_3"/>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="subject_3"/>
+         </item>
+         <item row="6" column="1">
+          <widget class="QPlainTextEdit" name="msg_3"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>20</y>
+          <width>242</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+       </widget>
+       <widget class="QPushButton" name="exitBtn_3">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>quitter</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="sendBtn_3">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>envoyer</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1091</width>
+       <height>485</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Gestion des paiements</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1001</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Georgia</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_12">
+       <attribute name="title">
+        <string>AJOUT</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_17">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>60</y>
+          <width>256</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_16">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QSplitter" name="splitter_14">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="reference_7">
+           <property name="font">
+            <font>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>NUM PAIEMENT :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference_5">
+           <property name="font">
+            <font>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>DATE PAIEMENT :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference_2">
+           <property name="font">
+            <font>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>MONTANT:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="quantite_2">
+           <property name="font">
+            <font>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>TYPE PAIEMENT :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="prix_2">
+           <property name="font">
+            <font>
+             <family>Georgia</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID PRODUIT :</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QSplitter" name="splitter_15">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLineEdit" name="num_conge"/>
+          <widget class="QLineEdit" name="date_debut"/>
+          <widget class="QLineEdit" name="date_fin"/>
+          <widget class="QLineEdit" name="type_3"/>
+          <widget class="QLineEdit" name="cine"/>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="ajouter_2">
+         <property name="text">
+          <string>Ajouter paiement </string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QComboBox" name="idprod">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>210</y>
+          <width>73</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>400</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_13">
+       <attribute name="title">
+        <string>MODIFICATION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_22">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>481</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QLabel" name="label_19">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir le numero du paiement à modifier :</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_21">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QSplitter" name="splitter_20">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QSplitter" name="splitter_18">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QLabel" name="reference_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>NUM PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="quantite_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>DATE PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="prix_8">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>MONTANT:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_9">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>TYPE PAIEMENT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="type_10">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID PRODUIT :</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QSplitter" name="splitter_19">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QComboBox" name="comboBox_4"/>
+           <widget class="QLineEdit" name="nom_5"/>
+           <widget class="QLineEdit" name="prenom_5"/>
+           <widget class="QLineEdit" name="matricule_5"/>
+           <widget class="QLineEdit" name="age_5"/>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="modifier_3">
+          <property name="font">
+           <font>
+            <family>Georgia</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Modifier Paiement</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_14">
+       <attribute name="title">
+        <string>AFFICHAGE</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_24">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>571</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_23">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_32">
+          <property name="font">
+           <font>
+            <family>Georgia</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>NUM PAIEMENT :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_20"/>
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="text">
+           <string>DECROISSANT </string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QTableView" name="tabconge"/>
+       </widget>
+       <widget class="QPushButton" name="refreshaff">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>340</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="idprod2">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>60</y>
+          <width>73</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="view">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>130</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_15">
+       <attribute name="title">
+        <string>SUPPRESSION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_26">
+        <property name="geometry">
+         <rect>
+          <x>116</x>
+          <y>110</y>
+          <width>451</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QLabel" name="label_21">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir le num du paiement à supprimer:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_25">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="reference_sup_5">
+          <property name="font">
+           <font>
+            <family>Georgia</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>NUM PAIEMENT :</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_6"/>
+         <widget class="QLineEdit" name="sup_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="supprimer_2">
+         <property name="font">
+          <font>
+           <family>Georgia</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Supprimer Paiement</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>statistique</string>
+       </attribute>
+       <widget class="QCustomPlot" name="customPlot" native="true">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>881</width>
+          <height>331</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1091</width>
+       <height>485</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Gestion des livraisons</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1091</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Simplified Arabic Fixed</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_16">
+       <attribute name="title">
+        <string>AJOUT</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_27">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>60</y>
+          <width>441</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_28">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QSplitter" name="splitter_29">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="reference_10">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID LIVRAISON:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference_11">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>DATE LIVRAISON:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="reference_3">
+           <property name="font">
+            <font>
+             <family>Simplified Arabic Fixed</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+             <underline>false</underline>
+            </font>
+           </property>
+           <property name="text">
+            <string>ID CMD :</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QSplitter" name="splitter_30">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLineEdit" name="cin_2"/>
+          <widget class="QLineEdit" name="nom_2"/>
+          <widget class="QComboBox" name="idcmd"/>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="ajouter_liv">
+         <property name="text">
+          <string>Ajouter livraison</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="refreshliv">
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_17">
+       <attribute name="title">
+        <string>MODIFICATION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_31">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>20</y>
+          <width>481</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_32">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QLabel" name="label_26">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Saisir l'identifiant de la livraison à modifier :</string>
+          </property>
+         </widget>
+         <widget class="QSplitter" name="splitter_33">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QSplitter" name="splitter_34">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QLabel" name="reference_12">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID LIVRAISON :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="quantite_10">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>DATE LIVRAISON :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="prix_9">
+            <property name="font">
+             <font>
+              <family>Simplified Arabic Fixed</family>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <italic>true</italic>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID CMD :</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QSplitter" name="splitter_35">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QComboBox" name="comboBox_7"/>
+           <widget class="QLineEdit" name="nom_6"/>
+           <widget class="QLineEdit" name="prenom_6"/>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="modifier_liv">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Modifier livraison</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>REFRESH</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_18">
+       <attribute name="title">
+        <string>AFFICHAGE</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_36">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>481</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter_37">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_33">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID LIVRAISON :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_21"/>
+         <widget class="QCheckBox" name="checkBox_4">
+          <property name="text">
+           <string>decroissant</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QTableView" name="tabliv"/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_19">
+       <attribute name="title">
+        <string>SUPPRESSION</string>
+       </attribute>
+       <widget class="QSplitter" name="splitter_38">
+        <property name="geometry">
+         <rect>
+          <x>98</x>
+          <y>106</y>
+          <width>431</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QLabel" name="label_27">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Saisir l'identifiant de la livraison à supprimer:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter_39">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="reference_sup_6">
+          <property name="font">
+           <font>
+            <family>Simplified Arabic Fixed</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID LIVRAISON :</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_8"/>
+         <widget class="QLineEdit" name="sup_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="supprimer_liv">
+         <property name="font">
+          <font>
+           <family>Simplified Arabic Fixed</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Supprimer livraison</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1498</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

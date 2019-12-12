@@ -16,6 +16,11 @@ public:
     void notification_ajt_er();
     void notification_DB_succ();
      void notification_DB_er();
+    void  notification_sup_paiement();
+    void notification_sup_cmd();
+    void notification_Login_err();
+    void notification_Login_scc();
+
 };
 
 #endif // NOTIFICATION_H

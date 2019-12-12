@@ -45,11 +45,12 @@ QSqlQueryModel * Employe::AfficherC()
 {
     QSqlQueryModel * model = new QSqlQueryModel();
           model->setQuery("SELECT * FROM EMPLOYES");
-          model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
-          model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("NUM_CIN"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
-          model->setHeaderData(4, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYES_ID"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("SEXE"));
+          model->setHeaderData(5, Qt::Horizontal, QObject::tr("TELEPHONE"));
     return model;
 
 }
@@ -110,11 +111,12 @@ QSqlQueryModel * Employe::AfficherC_Ordered ( )
 {
 QSqlQueryModel * model = new QSqlQueryModel();
 model->setQuery("SELECT * FROM EMPLOYES ORDER BY NOM ");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
-model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("NUM_CIN"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("EMPLOYE_ID"));
-model->setHeaderData(4, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("EMPLOYES_ID"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("DEPARTEMENT"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("SEXE"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("TELEPHONE"));
 return  model ;
 
 }

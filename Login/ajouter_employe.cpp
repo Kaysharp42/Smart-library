@@ -156,7 +156,7 @@ void Ajouter_Employe::on_table_empl_clicked(const QModelIndex &index)
     QString val=ui->table_empl->model()->data(index).toString();
 
     QSqlQuery qry;
-    qry.prepare("select * from EMPLOYES where EMPLOYE_ID='"+val+"' or NUM_CIN='"+val+"' or DEPARTEMENT='"+val+"'" );
+    qry.prepare("select * from EMPLOYES where EMPLOYES_ID='"+val+"' or DEPARTEMENT='"+val+"'" );
 
     if(qry.exec())
     {
