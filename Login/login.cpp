@@ -17,7 +17,7 @@
 #include "connection.h"
 #include "setting.h"
 #include "gestion_des_clients.h"
-
+#include "Gestion_des_employes.h"
 LogIn::LogIn(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LogIn)
@@ -122,6 +122,21 @@ void LogIn::on_LoginB_clicked()
                         this->hide();
                         C.show();
                     }
+                    else if (DEP=="Responsable  employe")
+                    {
+
+                        N.notification_Login_scc();
+                        this->hide();
+                        GE.show();
+                    }
+                    else if (DEP=="Responsable Fournisseur")
+                    {
+
+                        N.notification_Login_scc();
+                        this->close();
+                        GF.show();
+                    }
+
 
                 } else {
                     qDebug() << "ERROR DEP.";

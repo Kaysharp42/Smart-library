@@ -49,7 +49,7 @@
        <string notr="true">background-image: url(:/new/prefix1/MyResources/59524298_595553970930082_8770854359857627136_n.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">

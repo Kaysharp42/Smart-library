@@ -15,7 +15,9 @@
 #include "notification.h"
 #include "gestion_des_clients.h"
 #include "gestion.h"
+#include "Gestion_des_employes.h"
 #include "gestion_rh.h"
+#include "gestion_fournisseur.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class LogIn; }
 QT_END_NAMESPACE
@@ -46,5 +48,7 @@ Notification N;
 Gestion_des_clients GC;
 MainWindow C;
 Gestion_RH M;
+Gestion_des_employes GE;
+gestion_fournisseur GF;
 };
 #endif // LOGIN_H

@@ -42,7 +42,15 @@ reclamations.cpp \
     paiement.cpp \
     qcustomplot.cpp \
     smtp.cpp\
-gestion_rh.cpp
+gestion_rh.cpp \
+    Gestion_des_employes.cpp \
+    etudiant.cpp \
+    note.cpp \
+    popup.cpp \
+    tri.cpp\
+    commandef.cpp \
+    fournisseur.cpp \
+    gestion_fournisseur.cpp \
 
 
 
@@ -70,7 +78,15 @@ reclamations.h \
     paiement.h \
     qcustomplot.h \
     smtp.h\
-gestion_rh.h
+gestion_rh.h \
+    Gestion_des_employes.h \
+    etudiant.h \
+    note.h \
+    popup.h \
+    tri.h\
+    commandef.h \
+    fournisseur.h \
+    gestion_fournisseur.h
 
 
 
@@ -82,7 +98,11 @@ FORMS += \
     gestion_des_clients.ui\
     creer_compte.ui\
     gestion.ui\
-gestion_rh.ui
+gestion_rh.ui \
+        Gestion_des_employes.ui \
+        tri.ui \
+    gestion_fournisseur.ui
+
 
 
 
