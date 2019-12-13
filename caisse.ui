@@ -33,7 +33,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page">
      <property name="geometry">
@@ -778,29 +778,6 @@
         <property name="text">
          <string>Refresh</string>
         </property>
-       </widget>
-       <widget class="QSplitter" name="splitter_40">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>390</y>
-          <width>301</width>
-          <height>36</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="text">
-          <string>arduino on</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="text">
-          <string>arduino off</string>
-         </property>
-        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_13">

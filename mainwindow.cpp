@@ -2,14 +2,24 @@
 #include "ui_mainwindow.h"
 #include "connexion.h"
 #include "commande.h"
+#include "livraison.h"
 #include "notification.h"
+#include "arduino.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+int ret=A.connect_arduino();
+switch(ret){
+case(0):qDebug()<<"arduino is available and connected to :" << A.getarduino_port_name();
+    break;
+case(1):qDebug()<<"arduino is available but not connected to :" << A.getarduino_port_name();
+    break;
+case(-1):qDebug()<<"arduino is not avaialable";
+}
+QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
     refresh();
     connect(ui->sendBtn_3, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->exitBtn_3, SIGNAL(clicked()),this, SLOT(close()));
@@ -17,7 +27,17 @@ MainWindow::MainWindow(QWidget *parent)
 Connexion c;
 c.ouvrirConnexion();
 }
+void MainWindow::update_label()
+{
+    data=A.read_from_arduino();
 
+
+    if(data=="1")
+         ui->pushButton_3->setText("ON");
+    else if (data=="0")
+        ui->pushButton_4->setText("OFF");
+
+}
 
 
 MainWindow::~MainWindow()
@@ -54,11 +74,11 @@ void MainWindow::on_ajouter_clicked()
 {
     QString idcmd=ui->cin->text();
     QString datecmd=ui->nom->text();
-    QString idclient=ui->prenom->text();
+    QString idclient=ui->idclient->currentText();
 
-    QString idp=ui->matricule->text();
-    int numcmd=ui->numcontart->text().toInt();
-    commande e(idcmd,datecmd,idclient,idp,numcmd);
+    QString idp=ui->idp->currentText();
+
+    commande e(idcmd,datecmd,idclient,idp);
     bool test=e.ajouter_commande();
     if(test)
     {   refresh();
@@ -108,7 +128,7 @@ void MainWindow::on_modifier_2_clicked()
     tmpcmd.setidclient(ui->prenom_4->text());
     tmpcmd.setidp(ui->matricule_4->text());
 
-    tmpcmd.setnumcmd(ui->num_contrat->text().toInt());
+
 
     bool test=tmpcmd.modifier_commande();
     if(test){
@@ -131,8 +151,6 @@ void MainWindow::on_comboBox_3_activated(const QString &arg1)
     ui->nom_4->setText(tmpcmd.getdatecmd());
     ui->prenom_4->setText(tmpcmd.getidclient());
     ui->matricule_4->setText(tmpcmd.getidp());
-
-    ui->num_contrat->setText(QString::number(tmpcmd.getnumcmd()));
     refresh();
 
 
@@ -168,11 +186,11 @@ void MainWindow::on_checkBox_2_stateChanged(int arg1)
 void MainWindow::on_ajouter_2_clicked()
 {   QString nump=ui->num_conge->text();
     QString datep=ui->date_debut->text();
-    QString etatp=ui->date_fin->text();
+    QString montant=ui->date_fin->text();
     QString typep=ui->type_3->text();
-    QString idp=ui->cine->text();
+    QString idpr=ui->idprod->currentText();
 
-    paiement g(nump,datep,etatp,typep,idp);
+    paiement g(nump,datep,montant,typep,idpr);
     bool test=g.ajouter_paiement();
     if(test)
     {   refresh();
@@ -223,9 +241,9 @@ void MainWindow::on_comboBox_6_activated(const QString &arg1)
 void MainWindow::on_modifier_3_clicked()
 {
     tmppaiement.setdatep(ui->nom_5->text());
-    tmppaiement.setetatp(ui->prenom_5->text());
+    tmppaiement.setmontant(ui->prenom_5->text());
     tmppaiement.settypep(ui->matricule_5->text());
-    tmppaiement.setidp(ui->age_5->text());
+    tmppaiement.setidpr(ui->age_5->text());
 
 
     bool test=tmppaiement.modifier_paiement();
@@ -247,9 +265,9 @@ void MainWindow::on_comboBox_4_activated(const QString &arg1)
     tmppaiement.setnump(arg1);
     tmppaiement.chercher();
     ui->nom_5->setText(tmppaiement.getdatep());
-    ui->prenom_5->setText(tmppaiement.getetatp());
+    ui->prenom_5->setText(tmppaiement.getmontant());
     ui->matricule_5->setText(tmppaiement.gettypep());
-    ui->age_5->setText(tmppaiement.getidp());
+    ui->age_5->setText(tmppaiement.getidpr());
 
 }
 
@@ -343,5 +361,152 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1)
 
   refresh();
 } */
+///////livraisons
+void MainWindow::on_ajouter_liv_clicked()
+{
+    QString idliv=ui->cin_2->text();
+    QString dateliv=ui->nom_2->text();
+    //QString idclient=ui->prenom_2->text();
+
+ //   QString idp=ui->matricule_2->text();
+    //int numliv=ui->idcmd->text().toInt();
+     QString idcmd=ui->idprod->currentText();//hedhi matmeshech
+    livraison e(idliv,dateliv,idcmd);
+    bool test=e.ajouter_livraison();
+    if(test)
+    {   refresh();
+        QMessageBox::information(this, "PAS D'ERREUR", " livraison ajoutée");
+    }
+    else
+    {
+        QMessageBox::critical(this, " ERREUR ", " livraison non ajoutée ");
+    }
 
 
+    ui->tabliv->setModel(tmpliv.afficher_livraison());
+    refresh();
+}
+void MainWindow::on_supprimer_liv_clicked()
+{
+
+     QString idliv = ui->sup_2->text();
+     livraison e;
+     e.setidliv(idliv);
+     bool test=e.supprimer_livraison();
+     if(test)
+     {   refresh();
+         QMessageBox::information(this, "PAS D'ERREUR", "livraison supprimée");
+
+     }
+     else
+     {
+         QMessageBox::critical(this, " ERREUR ", "livraison supprimée ");
+     }
+
+    ui->sup_2->clear();
+
+
+}
+void MainWindow::on_modifier_liv_clicked()
+{
+
+    tmpliv.setdateliv(ui->nom_6->text());
+    tmpliv.setidcmd(ui->prenom_6->text());
+
+
+
+    bool test=tmpliv.modifier_livraison();
+    if(test){
+            QMessageBox::information(this, "PAS D'ERREUR", " livraison modifié");
+        }
+        else
+        {
+            QMessageBox::critical(this, " ERREUR ", "livraison non modifiée ");
+        }
+    refresh();
+
+}
+void MainWindow::on_comboBox_7_activated(const QString &arg1)
+{
+    tmpliv.setidliv(arg1);
+    tmpliv.chercher();
+    ui->nom_6->setText(tmpliv.getdateliv());
+    ui->prenom_6->setText(tmpliv.getidcmd());
+
+    refresh();
+
+
+}
+
+void MainWindow::on_comboBox_8_activated(const QString &arg1)
+{
+    ui->sup->setText(arg1);
+
+}
+
+
+
+void MainWindow::on_lineEdit_21_textChanged(const QString &arg1)
+{
+    ui->tabemployer->setModel(tmpcmd.recherche(arg1,etat));
+    valeur=arg1;
+
+}
+
+
+
+void MainWindow::on_checkBox_4_stateChanged(int arg1)
+{
+
+    etat=arg1;
+    ui->tabliv->setModel(tmpliv.recherche(valeur,etat));
+
+}
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+     ui->idprod->setModel(tmppaiement.afficher_prod());
+}
+
+void MainWindow::on_refreshaff_clicked()
+{
+     ui->idprod2->setModel(tmppaiement.afficher_prod());
+
+}
+
+void MainWindow::on_view_clicked()
+{
+    int idproduit = ui->idprod2->currentText().toInt();
+    ui->tabconge->setModel(tmppaiement.recherche2(idproduit));
+}
+
+void MainWindow::on_refresh2_clicked()
+{
+    ui->idclient->setModel(tmpcmd.afficher_client());
+    ui->idp->setModel(tmpcmd.afficher_p());
+}
+
+void MainWindow::on_refreshliv_clicked()
+{
+   ui->idcmd->setModel(tmpliv.afficher_livraison());
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->comboBox_7->setModel(tmpliv.afficher_livraison());
+
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    A.write_to_arduino("1");
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    A.write_to_arduino("0");
+}

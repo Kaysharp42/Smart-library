@@ -2,10 +2,10 @@
 
 
 
-
-QT       +=sql
-QT       += core gui sql network printsupport  serialport  \
+QT+=sql
+QT+= core gui sql network printsupport  serialport  \
             multimedia multimediawidgets
+QT+=serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,8 +26,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    arduino.cpp \
     commande.cpp \
     connexion.cpp \
+    livraison.cpp \
     main.cpp \
     mainwindow.cpp \
     notification.cpp \
@@ -36,8 +38,10 @@ SOURCES += \
     smtp.cpp
 
 HEADERS += \
+    arduino.h \
     commande.h \
     connexion.h \
+    livraison.h \
     mainwindow.h \
     notification.h \
     paiement.h \
@@ -45,6 +49,7 @@ HEADERS += \
     smtp.h
 
 FORMS += \
+    caisse.ui \
     mainwindow.ui
 
 # Default rules for deployment.

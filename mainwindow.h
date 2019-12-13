@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #include "commande.h"
 #include "paiement.h"
+#include "livraison.h"
+#include "arduino.h"
 #include <QMainWindow>
 #include <QMessageBox>
 #include "qcustomplot.h"
@@ -29,7 +31,7 @@ private slots:
 
 private slots:
     void on_ajouter_clicked();
-
+    void update_label();
 
 
     void on_supprimer_clicked();
@@ -60,13 +62,43 @@ private slots:
 
     void on_checkBox_3_stateChanged(int arg1);
 
+    void on_ajouter_liv_clicked();
+    void on_modifier_liv_clicked();
+    void on_supprimer_liv_clicked();
+    void on_lineEdit_21_textChanged(const QString &arg1);
+    void on_comboBox_7_activated(const QString &arg1);
+    void on_checkBox_4_stateChanged(int arg1);
+    void on_comboBox_8_activated(const QString &arg1);
+
    /* void on_tabWidget_2_currentChanged(int index);*/
+
+    void on_pushButton_clicked();
+
+    void on_refreshaff_clicked();
+
+    void on_view_clicked();
+
+    void on_refresh2_clicked();
+
+    void on_refreshliv_clicked();
+
+
+    void on_pushButton_2_clicked();
+
+private slots:
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;
     commande tmpcmd;
     paiement tmppaiement;
+    livraison tmpliv;
     int etat=0;
     QString valeur;
+    QByteArray data;//variable contenant les données recues
+    arduino A;
 };
 #endif // MAINWINDOW_H

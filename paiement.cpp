@@ -8,9 +8,10 @@ paiement::paiement()
 paiement::paiement(QString a,QString b,QString c,QString d,QString e)
 { nump=a;
   datep=b;
-  etatp=c;
+  montant=c;
   typep=d;
-  idp=e;
+  idpr=e;
+
 }
 
 void paiement:: setnump(QString a)
@@ -18,25 +19,21 @@ void paiement:: setnump(QString a)
   nump=a;
 }
 
-void paiement :: setdatep(QString a)
+void paiement :: setdatep(QString b)
 {
-    datep=a;
+    datep=b;
 }
 
-void paiement:: setetatp(QString a)
+void paiement::setmontant(QString c)
 {
-    etatp=a;
+    montant=c;
 }
-void paiement ::settypep(QString a)
+void paiement ::settypep(QString d)
 {
-    typep=a;
+    typep=d;
 }
-
-void paiement ::setidp(QString a)
-{
-   idp=a;
-}
-
+void paiement::setidpr(QString e)
+{idpr=e;}
 QString paiement:: getnump()
 {
     return nump;
@@ -46,44 +43,41 @@ QString paiement:: getdatep()
 {
     return datep;
 }
-QString paiement:: getetatp()
+QString paiement:: getmontant()
 {
-    return etatp;
+    return montant;
 }
 
 QString paiement:: gettypep()
 {
     return typep;
 }
+QString paiement::getidpr()
+{return idpr;}
 
-QString paiement:: getidp()
-{
-    return idp;
-}
 
 bool paiement:: ajouter_paiement()
 {
     QSqlQuery query;
 
-    query.prepare("INSERT INTO paiement (nump,datep,etatp,typep,idp) " "VALUES  (:nump,:datep,:etatp,:typep,:idp)");
+    query.prepare("INSERT INTO paiement (nump,datep,montant,typep,idpr) " "VALUES  (:nump,:datep,:montant,:typep,:idpr)");
     query.bindValue(":nump",nump);
     query.bindValue(":datep",datep);
-    query.bindValue(":etatp",etatp);
+    query.bindValue(":montant",montant);
     query.bindValue(":typep",typep);
-    query.bindValue(":idp", idp);
+    query.bindValue(":idpr",idpr);
+
     return    query.exec();
 }
 bool paiement:: modifier_paiement()
 {
     QSqlQuery query;
-       query.prepare("update paiement set datep=:datep,etatp=:etatp,typep=:typep,idp=:idp WHERE nump=:nump");
+       query.prepare("update paiement set datep=:datep,montant=:montant,typep=:typep,idpr=:idpr WHERE nump=:nump");
        query.bindValue(":nump",nump);
        query.bindValue(":datep",datep);
-       query.bindValue(":etatp",etatp);
+       query.bindValue(":etatp",montant);
        query.bindValue(":typep",typep);
-       query.bindValue(":idp",idp);
-
-
+       query.bindValue(":idpr",idpr);
        return    query.exec();
 
 }
@@ -101,9 +95,10 @@ QSqlQueryModel * paiement ::afficher_paiement()
     model->setQuery("select * from paiement");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("nump"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("datep"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("etatp"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("montant"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("typep"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("idp"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("idpr"));
+
 
         return model;
 }
@@ -121,15 +116,15 @@ QSqlQueryModel * paiement:: afficher_list()
 void paiement:: chercher()
 {
     QSqlQuery query1;
-       query1.prepare("SELECT datep,etatp,typep,idp FROM paiement WHERE nump=:nump");
+       query1.prepare("SELECT datep,montant,typep,idpr FROM paiement WHERE nump=:nump");
        query1.bindValue(":nump",nump);
        query1.exec();
        while(query1.next())
        {
        datep = query1.value(0).toString();
-       etatp = query1.value(1).toString();
+       montant = query1.value(1).toString();
        typep = query1.value(2).toString();
-       idp = query1.value(3).toString();
+       idpr = query1.value(3).toString();
 
           }
 }
@@ -146,9 +141,10 @@ QSqlQueryModel * paiement:: recherche(QString valeur, int etat)
      model->setQuery(query);
      model->setHeaderData(0, Qt::Horizontal, QObject::tr("nump"));
      model->setHeaderData(1, Qt::Horizontal, QObject::tr("datep"));
-     model->setHeaderData(2, Qt::Horizontal, QObject::tr("etatp"));
+     model->setHeaderData(2, Qt::Horizontal, QObject::tr("montant"));
      model->setHeaderData(3, Qt::Horizontal, QObject::tr("typep"));
-     model->setHeaderData(4, Qt::Horizontal, QObject::tr("idp"));
+      model->setHeaderData(4, Qt::Horizontal, QObject::tr("idpr"));
+
 
      return model;
 
@@ -164,4 +160,43 @@ QSqlQueryModel * paiement:: recherche(QString valeur, int etat)
          *ticks<<i;
          *labels <<typep;
  }
+
  }
+ QSqlQueryModel * paiement ::afficher_prod()
+ {
+     QSqlQueryModel * model= new QSqlQueryModel();
+
+     model->setQuery("select id from produit");
+
+
+         return model;
+ }
+ QSqlQueryModel * paiement:: recherche2( int idprod)
+ {    QSqlQueryModel * model=new QSqlQueryModel();
+
+      QSqlQuery query;
+        QSqlQuery query2;
+
+             query.prepare("SELECT * FROM paiement WHERE (idpr  like :idprod) ");
+    query2.prepare("SELECT * FROM PAIEMENT INNER JOIN PRODUIT ON PAIEMENT.idpr = PRODUIT.id;");
+
+      query.bindValue(":idprod",idprod);
+      query.exec();
+      model->setQuery(query2);
+      model->setHeaderData(0, Qt::Horizontal, QObject::tr("nump"));
+      model->setHeaderData(1, Qt::Horizontal, QObject::tr("datep"));
+      model->setHeaderData(2, Qt::Horizontal, QObject::tr("montant"));
+      model->setHeaderData(3, Qt::Horizontal, QObject::tr("typep"));
+       model->setHeaderData(4, Qt::Horizontal, QObject::tr("idpr"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("nom"));
+      /* query2.bindValue(":idprod",idprod);
+       query2.exec();
+        model->setQuery(query2);
+          model->setHeaderData(5, Qt::Horizontal, QObject::tr("nom"));*/
+
+
+      return model;
+
+ }
+
+

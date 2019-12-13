@@ -12,27 +12,31 @@ public:
 
     void setnump(QString);
     void setdatep(QString);
-    void setetatp(QString);
+    void setmontant(QString);
     void settypep(QString);
-    void setidp(QString);
+    void setidpr(QString);
 
     QString getnump();
     QString getdatep();
-    QString getetatp();
+    QString getmontant();
     QString gettypep();
-    QString getidp();
+    QString getidpr();
+
 
     bool ajouter_paiement();
     bool modifier_paiement();
     bool supprimer_paiement();
     QSqlQueryModel * afficher_paiement();
+
     QSqlQueryModel * afficher_list();
     void chercher();
     QSqlQueryModel * recherche(QString valeur, int etat);
+    QSqlQueryModel * recherche2( int idprod);
     void statistique(QVector<double>* ticks,QVector<QString> *labels);
+     QSqlQueryModel * afficher_prod();
 
 private:
-    QString datep,etatp,typep,idp, nump;
+    QString datep,montant,typep,nump,idpr;
 
 };
 

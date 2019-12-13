@@ -1,87 +1,136 @@
 #include "livraison.h"
-#include "mainwindow.h"
-#include <QApplication>
-#include "ui_mainwindow.h"
-#include<QString>
-#include <QtSql/QSqlQuery>
-#include <QDebug>
-#include <QtSql/QSqlQueryModel>
-#include <QSqlError>
+
 livraison::livraison()
 {
-    num_liv="";
-    date_liv="" ;
-    adresse="" ;
-}
-livraison::livraison(QString num_liv,QString adresse,QString date_liv)
-{
-
-   this->num_liv=num_liv;
-    this->adresse=adresse;
-    this->date_liv=date_liv;
-}
-bool livraison::ajouterlivraison()
-{
- QSqlQuery q;
- q.prepare("INSERT into livraison (num_liv, date_liv,adresse,) VALUES (:num_liv, :date_liv, :adresse,)");
- q.bindValue(":num_liv",num_liv);
- q.bindValue(":date_liv",date_liv);
- q.bindValue("type",adresse);
-
- if (q.exec()){
-     qDebug()<<"livraison ajouté";
-     return true;
- }
- else{
-     qDebug()<<q.lastError().text();
-
-     return false;
- }
 
 }
-QSqlQueryModel *livraison::getAlllivraison()
+livraison::livraison(QString c,QString n,QString p)
 {
-    QSqlQueryModel *model = new QSqlQueryModel();
-    model->setQuery("SELECT * FROM livraison");
+    idliv=c;
+    dateliv=n;
+idcmd=p;
+}
+
+
+void livraison::setidliv(QString c)
+{
+    idliv=c;
+}
+void livraison::setdateliv(QString n)
+{
+    dateliv=n;
+}
+void livraison::setidcmd(QString p)
+{
+    idcmd=p;
+}
+
+
+QString livraison:: getidliv()
+{
+    return  idliv;
+}
+QString livraison:: getdateliv()
+{
+    return dateliv;
+}
+QString livraison:: getidcmd()
+{
+    return idcmd;
+}
+
+bool livraison:: ajouter_livraison()
+{
+    QSqlQuery query;
+
+    query.prepare("INSERT INTO livraison (idliv,dateliv,idcmd) " "VALUES (:idliv,:dateliv,:idcmd)");
+    query.bindValue(":idliv",idliv);
+    query.bindValue(":dateliv",dateliv);
+    query.bindValue(":idclient",idcmd);
+
+    return    query.exec();
+
+}
+
+
+bool livraison::supprimer_livraison()
+{
+
+    QSqlQuery query;
+    query.prepare("Delete from livraison where idliv = :idliv ");
+    query.bindValue(":idliv",idliv);
+    return    query.exec();
+
+}
+QSqlQueryModel * livraison:: afficher_livraison()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from livraison");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("idliv"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("dateliv"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("idcmd"));
+
+
     return model;
 }
-void livraison::deletelivraison(QString num_liv)
-    {
-        QSqlQuery q;
-        q.prepare("DELETE from livraison where num_liv=:num_liv");
-        q.bindValue(":num_liv",num_liv);
-        q.exec();
-    }
-void livraison::modifierlivraison(QString num_liv)
-{
-    QSqlQuery q;
-    q.prepare("UPDATE livraison set  num_liv=:num_liv   date_liv= :date_liv and  adresse = :adresse ");
-    q.bindValue(":num_liv",this->num_liv);
-    q.bindValue(":date_liv",this->date_liv);
-    q.bindValue(":adresse", this->adresse);
-    q.exec();
-}
-QSqlQueryModel* livraison::afficherlivraison()
-{
 
-    QSqlQueryModel*model = new QSqlQueryModel() ;
-    model->setQuery("SELECT *FROM livraison");
-    model->setHeaderData(0,Qt::Horizontal ,QObject::tr("livraison"));
-    return model ;
+ bool livraison::modifier_livraison()
+ {      QSqlQuery query;
+        query.prepare("update livraison set dateliv=:dateliv,idcmd=:idc whermde idliv=:idliv");
+        query.bindValue(":idliv",idliv);
+        query.bindValue(":dateliv",dateliv);
+        query.bindValue(":idclient",idcmd);
+
+        return    query.exec();
 
 }
-livraison livraison::getlivraison(QString num_liv)
-{
-    livraison *p = new livraison();
-   QSqlQuery q;
-    q.prepare("SELECT * from livraison where num_liv=:num_liv");
-    q.bindValue(":num_liv",num_liv);
-    q.exec();
-    while (q.next()) {
-            p->setnum_liv(q.value(1).toString());
-            p->setdate_liv(q.value(2).toString()); //q.value(index colonne base de donné)
-            p->setadresse(q.value(3).toString());
 
-           }
-return *p;
+QSqlQueryModel * livraison:: afficher_list()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+        model->setQuery("select idliv from livraison");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("idliv"));
+        return model;
+}
+void livraison:: chercher()
+{    QSqlQuery query1;
+     query1.prepare("SELECT dateliv,idclient,idp,numliv FROM livraison WHERE idliv =:idliv");
+     query1.bindValue(":idliv",idliv);
+     query1.exec();
+     while(query1.next())
+     {
+     dateliv = query1.value(1).toString();
+     idcmd = query1.value(2).toString();
+
+     }
+
+}
+QSqlQueryModel * livraison:: recherche(QString valeur, int etat)
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+
+    QSqlQuery query;
+    if(etat==0)
+   { query.prepare("SELECT * FROM livraison WHERE (idliv LIKE :valeur) order by idliv");}
+    else   { query.prepare("SELECT * FROM livraison WHERE (idliv LIKE :valeur) order by idliv desc");}
+    valeur="%"+valeur+"%";
+    query.bindValue(":valeur",valeur);
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("idliv"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("dateliv"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("idcmd"));
+
+    return model;
+
+}
+QSqlQueryModel * livraison ::afficher_c()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select idcmd from commande");
+
+
+        return model;
 }
